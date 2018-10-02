@@ -1,0 +1,75 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("./src/nightsky.png"); 
+  background-size: cover;
+  background-repeat: no repeat;
+  max-width:50%;
+}
+
+img {
+  position: relative;
+  top: 330px;
+  left: 1377px;
+  bottom: 65px;
+  max-width: 50%; 
+  max-height: 20%;
+}
+
+.main-nav-buttons{
+  position: relative;
+  top: 400px;
+  left: 1340px;
+  flex-direction: row;
+}
+
+button{
+  border: solid;
+  border-color: white;
+  width: 1000px;
+  height: 70px;
+  margin: 20px;
+  color: white; 
+  background: transparent;
+  outline: none;
+  border-color:rgba(69, 243, 243, 0.733);
+  box-shadow: 0 0 10px rgba(69, 243, 243, 0.733);
+
+}
+.sidebar-modal {
+  position: fixed; 
+  margin: auto;
+  border: solid;
+  border-color: white; 
+  width: 400px;
+  height: 100%;
+  left: 0px;
+  bottom: 9px;
+  border-color:rgba(69, 243, 243, 0.733);
+  box-shadow: 0 0 10px rgba(69, 243, 243, 0.733);
+}
+
+#github-logo {
+  width: 100px;
+  height: 100px;
+}
+
+
+#maininfo p {
+  position: relative;
+  margin: auto; 
+  top: 325px;
+  left: 980px;
+  font-size: 30px;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+  padding: 20px;
+  font-family: monospace;  
+  color: white; 
+  max-height: 50%;
+  max-width: 60%;
+}
