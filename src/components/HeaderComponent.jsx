@@ -1,5 +1,5 @@
 import React from 'react';
-const githubLogo = require('../src/Octocat.jpg');
+const githubLogo = require('../Octocat.jpg');
 
 
 const Header = () => {

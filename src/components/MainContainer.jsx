@@ -4,8 +4,6 @@ import MainContent from './MainContent.jsx'
 import Header from './HeaderComponent.jsx'; 
 import SidebarModal from './SidebarModal.jsx'
 
-//Will hold state for app. Child comps will be 
-
 class MainContainer extends Component {
     constructor(props){
         super(props); 
@@ -14,7 +12,7 @@ class MainContainer extends Component {
   render() {
     return (
       <div>
-        <Header />
+        {/* <Header /> */}
         <MainContent />
         {/* <SidebarModal /> */}
       </div>
