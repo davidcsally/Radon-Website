@@ -1,5 +1,5 @@
 import React from 'react';  
-import MainNavButtons from './ButtonGroupComponent.jsx';
+import MainNavButtons from './MainNavButtons';
 import logo from '../cyanWithGlow.jpg';
 
 const MainContent = (props) => { 

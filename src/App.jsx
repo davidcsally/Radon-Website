@@ -1,7 +1,9 @@
 
 import React from 'react';
-import MainContainer from './components/MainContainer.jsx';
+// import Header from './HeaderComponent.jsx'; 
+import MainContent from './components/MainContent';
 import { Component } from 'react';
+import { BrowserRouter as Router, Route} from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {
@@ -11,9 +13,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <MainContainer />
-      </div> 
+      <Router>
+        {/* <Header /> */}
+        <Route expact path='/' component={MainContent} />
+        {/* <Route path='/docs' component={DocsComponent} /> */}
+      </Router>
     )
   }
 }
