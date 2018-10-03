@@ -1,9 +1,9 @@
-
 import React from 'react';
-// import Header from './HeaderComponent.jsx'; 
 import MainContent from './components/MainContent';
+import DocsComponent from './components/DocsComponent';
 import { Component } from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { BrowserHistory } from 'react-router';
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {
@@ -13,11 +13,16 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        {/* <Header /> */}
-        <Route expact path='/' component={MainContent} />
-        {/* <Route path='/docs' component={DocsComponent} /> */}
-      </Router>
+      <div id='route-wrapper'>
+        <Router>
+          <Switch>
+            <Route exact path='/' component={MainContent} />
+            <Route path='/docs' component={DocsComponent} />
+            <Redirect from='/*' to='/' />
+          </Switch>
+        </Router>
+
+      </div>
     )
   }
 }
