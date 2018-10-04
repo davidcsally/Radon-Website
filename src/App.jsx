@@ -1,25 +1,26 @@
-
 import React from 'react';
-import MainContainer from '../components/MainContainer.jsx';
+import MainContent from './components/welcomePage/MainContent';
+import DocsComponent from './components/DocsComponent';
 import { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 
-//renders MainContainer and HeaderComponent
 class App extends Component {
-    constructor(props) {
-      super(props);
-
-    }
-
-  
-  renderDocumentation = () => {
-    console.log('hi')
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
-      <div>
-       <MainContainer />
-      </div> 
+      <div id='route-wrapper'>
+        <Router>
+          <Switch>
+            <Route exact path='/' component={MainContent} />
+            <Route path='/docs' component={DocsComponent} />
+            <Redirect from='/*' to='/' />
+          </Switch>
+        </Router>
+
+      </div>
     )
   }
 }
