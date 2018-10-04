@@ -15,13 +15,13 @@ let childNode = StateNode("ChildNode", "RootNode");`;
       <h3>Arguments</h3>
         <p className='paragraph'>
             <ol>
-                <li> <code>name</code> <italics>(String):</italics> The name of the node that is  to be created in the state tree.</li>
-                <li> <code>parent</code> <italics>(String):</italics> The name of the parent of the node that is being created, leave empty if root. </li>
+                <li> <code className='copySection'>name</code> <italics>(String):</italics> The name of the node that is  to be created in the state tree.</li>
+                <li> <code className='copySection'>parent</code> <italics>(String):</italics> The name of the parent of the node that is being created, leave empty if root. </li>
             </ol>
         </p>
         <h3>Returns</h3>
         <p className='paragraph'>
-            (<code>StateNode</code>): An object with methods to define the initial state of the node, along with the modifiers of the node.
+            (<code className='copySection'>StateNode</code>): An object with methods to define the initial state of the node, along with the modifiers of the node.
         </p>
         <h3>Example</h3>
         <div></div>
