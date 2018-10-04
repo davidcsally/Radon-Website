@@ -11,73 +11,47 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const SideBarComponent = (props) => { 
 
   return (
-  <div id='sidebar'>
-    <ExpansionPanel defaultExpanded={true}>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>Motivation</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            <Link to={props.path + '/introduction'} className='subtabs'>Introduction</Link><br/><br/>
-            <Link to={props.path + '/deep-dive'} className='subtabs'>Deep Dive</Link>
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+    <div id='sidebar'>
+      <ExpansionPanel defaultExpanded={true}>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>Motivation</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Typography>
+              <Link to={props.path + '/introduction'} className='subtabs'>Introduction</Link><br/><br/>
+              <Link to={props.path + '/deep-dive'} className='subtabs'>Deep Dive</Link>
+            </Typography>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
 
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>Getting Started</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            <Link to={props.path + '/quick-start'} className='subtabs'>Quick Start</Link><br/><br/>
-            <Link to={props.path + '/nested-objects'} className='subtabs'>Nested Objects</Link><br/><br/>
-            <Link to={props.path + '/async-modifiers'} className='subtabs'>Async Modifiers</Link>
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+        <ExpansionPanel>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>Getting Started</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Typography>
+              <Link to={props.path + '/quick-start'} className='subtabs'>Quick Start</Link><br/><br/>
+              <Link to={props.path + '/nested-objects'} className='subtabs'>Nested Objects</Link><br/><br/>
+              <Link to={props.path + '/async-modifiers'} className='subtabs'>Async Modifiers</Link>
+            </Typography>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
 
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>API Reference</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            <Link to={props.path + '/stateNode'} className='subtabs'>StateNode</Link><br/><br/>
-            <Link to={props.path + '/combineNodes'} className='subtabs'>combineNodes</Link><br/><br/>
-            <Link to={props.path + '/Provider'} className='subtabs'>Provider</Link><br/><br/>
-            <Link to={props.path + '/bindToSilo'} className='subtabs'>bindToSilo</Link><br/><br/>
-            <Link to={props.path + '/bindObjectToSilo'} className='subtabs'>bindObjectToSilo</Link>
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-  </div> 
-    
-    
-
-    // <div id='sidebar'>
-    //   <div className='active-tab'>
-    //     <Link to={props.path + '/motivation/introduction'} className='sidebar-tabs' onClick={changeActiveHeaderTab}>Motivation</Link>
-    //     <ul className='active-list'>
-    //       <li><Link to={props.path + '/motivation/introduction'} className='list-tabs active-list-tab'>Introduction</Link></li>
-    //       <li><Link to={props.path + '/motivation/deepdive'} className='list-tabs inactive-list-tab'>Deep Dive</Link></li>
-    //     </ul>
-    //   </div>
-    //   <div>
-    //     <Link to={props.path + '/gettingstarted'} className='sidebar-tabs' onClick={changeActiveHeaderTab}>Getting Started</Link>
-    //     <ul>
-    //       <li>hey</li>
-    //       <li>there</li>
-    //     </ul>
-    //   </div>
-    //   <div>
-    //     <Link to={props.path + '/contribute'} className='sidebar-tabs' onClick={changeActiveHeaderTab}>Contribute</Link>
-    //     <ul>
-    //       <li>sup</li>
-    //       <li>mate</li>
-    //     </ul>
-    //   </div>
-    // </div>
+        <ExpansionPanel>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>API Reference</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Typography>
+              <Link to={props.path + '/stateNode'} className='subtabs'>StateNode</Link><br/><br/>
+              <Link to={props.path + '/combineNodes'} className='subtabs'>combineNodes</Link><br/><br/>
+              <Link to={props.path + '/Provider'} className='subtabs'>Provider</Link><br/><br/>
+              <Link to={props.path + '/bindToSilo'} className='subtabs'>bindToSilo</Link><br/><br/>
+              <Link to={props.path + '/bindObjectToSilo'} className='subtabs'>bindObjectToSilo</Link>
+            </Typography>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+    </div> 
   )
 }
 

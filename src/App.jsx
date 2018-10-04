@@ -1,5 +1,5 @@
 import React from 'react';
-import MainContent from './components/MainContent';
+import MainContent from './components/welcomePage/MainContent';
 import DocsComponent from './components/DocsComponent';
 import { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-do
 class App extends Component {
   constructor(props) {
     super(props);
-
   }
 
   render() {
