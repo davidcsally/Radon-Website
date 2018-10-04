@@ -1,7 +1,7 @@
 import React from 'react';  
 import { Switch, Route, Redirect } from 'react-router-dom';
-import IntroductionComponent from './IntroductionComponent';
-import DeepDiveComponent from './DeepDiveComponent';
+import IntroductionComponent from './motivation/IntroductionComponent';
+import DeepDiveComponent from './motivation/DeepDiveComponent';
 
 const DocsTextComponent = (props) => { 
   return (

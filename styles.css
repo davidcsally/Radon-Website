@@ -85,7 +85,8 @@ body {
   float: left;
   padding-top: 20px;
   padding-left: 20px;
-  height: 100%;
+  min-height: 100%;
+  overflow: auto;
   width: 25%;
   min-width: 200px;
   outline: none;
@@ -114,6 +115,7 @@ body {
   height: 100%;
   width: auto;
   overflow-x: hidden;
+  overflow-y: scroll;
   background-color: white;
 }
 

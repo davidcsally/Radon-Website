@@ -1,6 +1,6 @@
 import React from 'react';  
 import { Link } from 'react-router-dom';
-import IntroductionComponent from './IntroductionComponent';
+import IntroductionComponent from './motivation/IntroductionComponent';
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
