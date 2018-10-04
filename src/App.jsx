@@ -2,7 +2,6 @@ import React from 'react';
 import MainContent from './components/MainContent';
 import DocsComponent from './components/DocsComponent';
 import { Component } from 'react';
-import { BrowserHistory } from 'react-router';
 import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 
 class App extends Component {
