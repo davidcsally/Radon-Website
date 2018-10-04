@@ -85,7 +85,8 @@ body {
   float: left;
   padding-top: 20px;
   padding-left: 20px;
-  height: 100%;
+  min-height: 100%;
+  overflow: auto;
   width: 25%;
   min-width: 200px;
   outline: none;
@@ -114,7 +115,14 @@ body {
   height: 100%;
   width: auto;
   overflow-x: hidden;
+  overflow-y: scroll;
   background-color: white;
+}
+
+/* ====================> Getting Started <================== */
+
+.spacingWithSH > span {
+  line-height: 20px !important;
 }
 
 /* =======================> API Ref <======================= */
@@ -128,7 +136,13 @@ div.apiref > p > ol {
   margin-left: 15px;
 }
 
-div.apiref > p > ol > li > code, div.apiref > p > code {
+/* div.apiref > p > ol > li > code, div.apiref > p > code {
+  background-color: rgb(238, 238, 238);
+  padding: 3px;
+  border-radius: 4px;
+} */
+
+code {
   background-color: rgb(238, 238, 238);
   padding: 3px;
   border-radius: 4px;

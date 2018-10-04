@@ -9,7 +9,7 @@ const DeepDiveComponent = (props) => {
 let rootNode = StateNode("RootNode");
 let childNode = StateNode("ChildNode", "RootNode");`;
   return (
-    <div className='all-text-components apiref' id='motivation-component'>
+    <div className='all-text-components apiref'>
       <h1>StateNode</h1>
       <p className='subheaders'>Creates a single node on the Radon state tree.</p>
       <h3>Arguments</h3>

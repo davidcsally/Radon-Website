@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 const DocsComponent = (props) => { 
   return (
     <div id='docs-component'>
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="secondary">
         <Toolbar>
           <Typography variant="title" color="inherit">
             Radon
