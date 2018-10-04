@@ -119,6 +119,27 @@ body {
   background-color: white;
 }
 
+/* =======================> API Ref <======================= */
+
+div.apiref {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(73, 73, 73);
+}
+
+div.apiref > p > ol {
+  margin-left: 15px;
+}
+
+div.apiref > p > ol > li > code, div.apiref > p > code {
+  background-color: rgb(238, 238, 238);
+  padding: 3px;
+  border-radius: 4px;
+}
+
+italics {
+  font-style: italic;
+}
+
 .all-text-components {
   margin: 50px 100px;
 }
