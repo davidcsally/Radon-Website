@@ -93,8 +93,7 @@ body {
   width: 25%;
   min-width: 200px;
   outline: none;
-  background-color: rgba(69, 243, 243, 0.733);
-  border-color: rgba(69, 243, 243, 0.733);
+  background-color: rgba(69, 243, 243);
 }
 
 .sidebar-tabs {
@@ -109,7 +108,7 @@ body {
 }
 
 .active-tab {
-  background-color: #dbdbdd;
+  background-color: white;
 }
 
 .inactive-tab:hover {
@@ -117,12 +116,33 @@ body {
   background-color: rgb(60, 178, 188);
 }
 
+ul {
+  list-style: none;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  display: none;
+}
+
+li {
+  margin: 20px;
+}
+
+.active-list {
+  display: block !important;
+}
+
+.list-tabs {
+  text-decoration: none;
+}
+
+/***********************************************/
+
 #docs-text-component {
   vertical-align: top;
   height: 100%;
   width: auto;
   overflow-x: hidden;
-  background-color: rgba(250, 250, 250, 0.86);
+  background-color: white;
 }
 
 .all-text-components {

@@ -1,9 +1,9 @@
 import React from 'react';  
 
-const MotivationComponent = (props) => { 
+const IntroductionComponent = (props) => { 
   return (
     <div className='all-text-components' id='motivation-component'>
-      <h1 id='motivation-header'>Motivation</h1>
+      <h1 id='motivation-header'>Introduction</h1>
       <h3>Summary</h3>
       <p className='paragraph'>
         When it comes to adopting a state manager for frontend frameworks, considerations for scope are rarely 
@@ -85,4 +85,4 @@ const MotivationComponent = (props) => {
   )
 }
 
-export default MotivationComponent;
+export default IntroductionComponent;
