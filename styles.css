@@ -119,6 +119,12 @@ body {
   background-color: white;
 }
 
+/* ====================> Getting Started <================== */
+
+.spacingWithSH > span {
+  line-height: 20px !important;
+}
+
 /* =======================> API Ref <======================= */
 
 div.apiref {
@@ -130,7 +136,13 @@ div.apiref > p > ol {
   margin-left: 15px;
 }
 
-div.apiref > p > ol > li > code, div.apiref > p > code {
+/* div.apiref > p > ol > li > code, div.apiref > p > code {
+  background-color: rgb(238, 238, 238);
+  padding: 3px;
+  border-radius: 4px;
+} */
+
+code {
   background-color: rgb(238, 238, 238);
   padding: 3px;
   border-radius: 4px;

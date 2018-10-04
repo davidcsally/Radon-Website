@@ -1,6 +1,5 @@
 import React from 'react';  
 import { Link } from 'react-router-dom';
-import IntroductionComponent from './motivation/IntroductionComponent';
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -31,6 +30,7 @@ const SideBarComponent = (props) => {
           <ExpansionPanelDetails>
             <Typography>
               <Link to={props.path + '/quick-start'} className='subtabs'>Quick Start</Link><br/><br/>
+              <Link to={props.path + '/react-guide'} className='subtabs'>React Guide</Link><br/><br/>
               <Link to={props.path + '/nested-objects'} className='subtabs'>Nested Objects</Link><br/><br/>
               <Link to={props.path + '/async-modifiers'} className='subtabs'>Async Modifiers</Link>
             </Typography>
