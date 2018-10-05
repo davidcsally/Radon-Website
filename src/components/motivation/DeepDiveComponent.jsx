@@ -2,7 +2,8 @@ import React from 'react';
 
 const DeepDiveComponent = (props) => { 
   return (
-    <div className='all-text-components' id='motivation-component'>
+    <div className="docContent">
+    <div className='all-text-components apiref' id='motivation-component'>
       <h1>Deep Dive</h1>
       <p className='subheaders'>A deeper look into how Radon works.</p>
       <h3>Data Encapsulation</h3>
@@ -61,6 +62,15 @@ const DeepDiveComponent = (props) => {
           before progressing to the next. Hence, the developer does not need to worry about conflicting state 
           changes or out of order updates.
         </p>
+    </div>
+    <div className='pageContents'>
+            <ul>
+            <p>CONTENTS</p>
+                <li>Data Encapsulation</li>
+                <li>Component Rendering</li>
+                <li>Asynchronicity</li>
+            </ul>
+    </div>
     </div>
   )
 }

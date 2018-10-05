@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const SideBarComponent = (props) => { 
-
+  console.log(window.location.href.split('/').pop());
   return (
     <div id='sidebar'>
       <ExpansionPanel defaultExpanded={true}>
@@ -17,8 +17,8 @@ const SideBarComponent = (props) => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <Link to={props.path + '/introduction'} className='subtabs'>Introduction</Link><br/><br/>
-              <Link to={props.path + '/deep-dive'} className='subtabs'>Deep Dive</Link>
+              <Link to={props.path + '/introduction'} className={'subtabs ' + (window.location.href.split('/').pop() === 'introduction' ? "selected" : '')}>Introduction</Link><br/><br/>
+              <Link to={props.path + '/deep-dive'} className={'subtabs ' + (window.location.href.split('/').pop() === 'deep-dive' ? "selected" : '')}>Deep Dive</Link>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -29,10 +29,10 @@ const SideBarComponent = (props) => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <Link to={props.path + '/quick-start'} className='subtabs'>Quick Start</Link><br/><br/>
-              <Link to={props.path + '/react-guide'} className='subtabs'>React Guide</Link><br/><br/>
-              <Link to={props.path + '/nested-objects'} className='subtabs'>Nested Objects</Link><br/><br/>
-              <Link to={props.path + '/async-modifiers'} className='subtabs'>Async Modifiers</Link>
+              <Link to={props.path + '/quick-start'} className={'subtabs '+ (window.location.href.split('/').pop() === 'quick-start' ? "selected" : '')}>Quick Start</Link><br/><br/>
+              <Link to={props.path + '/react-guide'} className={'subtabs ' + (window.location.href.split('/').pop() === 'react-guide' ? "selected" : '')}>React Guide</Link><br/><br/>
+              <Link to={props.path + '/nested-objects'} className={'subtabs '+ (window.location.href.split('/').pop() === 'nested-objects' ? "selected" : '')}>Nested Objects</Link><br/><br/>
+              <Link to={props.path + '/async-modifiers'} className={'subtabs '+ (window.location.href.split('/').pop() === 'async-modifiers' ? "selected" : '')}>Async Modifiers</Link>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -43,11 +43,11 @@ const SideBarComponent = (props) => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <Link to={props.path + '/stateNode'} className='subtabs'>StateNode</Link><br/><br/>
-              <Link to={props.path + '/combineNodes'} className='subtabs'>combineNodes</Link><br/><br/>
-              <Link to={props.path + '/Provider'} className='subtabs'>Provider</Link><br/><br/>
-              <Link to={props.path + '/bindToSilo'} className='subtabs'>bindToSilo</Link><br/><br/>
-              <Link to={props.path + '/bindObjectToSilo'} className='subtabs'>bindObjectToSilo</Link>
+              <Link to={props.path + '/stateNode'} className={'subtabs '+ (window.location.href.split('/').pop() === 'stateNode' ? "selected" : '')}>StateNode</Link><br/><br/>
+              <Link to={props.path + '/combineNodes'} className={'subtabs '+ (window.location.href.split('/').pop() === 'combineNodes' ? "selected" : '')}>combineNodes</Link><br/><br/>
+              <Link to={props.path + '/Provider'} className={'subtabs '+ (window.location.href.split('/').pop() === 'Provider' ? "selected" : '')}>Provider</Link><br/><br/>
+              <Link to={props.path + '/bindToSilo'} className={'subtabs '+ (window.location.href.split('/').pop() === 'bindToSilo' ? "selected" : '')}>bindToSilo</Link><br/><br/>
+              <Link to={props.path + '/bindObjectToSilo'} className={'subtabs '+ (window.location.href.split('/').pop() === 'bindObjectToSilo' ? "selected" : '')}>bindObjectToSilo</Link>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>

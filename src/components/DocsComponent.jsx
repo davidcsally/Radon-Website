@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 const DocsComponent = (props) => { 
   return (
     <div id='docs-component'>
-      <AppBar position="static" color="secondary">
+      <AppBar className="header" position="static" color="secondary">
         <Toolbar>
           <Typography variant="title" color="inherit">
             Radon
@@ -17,8 +17,10 @@ const DocsComponent = (props) => {
         </Toolbar>
       </AppBar>
 
-      <SideBarComponent path={props.match.path}/>
-      <DocsTextComponent />
+      <div className="content">
+        <SideBarComponent className="sidebar" path={props.match.path}/>
+        <DocsTextComponent className="documentation"/>
+      </div>
     </div>
   )
 }
