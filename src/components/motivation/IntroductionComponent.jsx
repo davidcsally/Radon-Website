@@ -2,7 +2,8 @@ import React from 'react';
 
 const IntroductionComponent = (props) => { 
   return (
-    <div className='all-text-components' id='motivation-component'>
+    <div className="docContent">
+    <div className='all-text-components apiref' id='motivation-component'>
       <h1>Introduction</h1>
       <p className='subheaders'>An abstract look into Radon.</p>
       <h3>Background</h3>
@@ -45,6 +46,14 @@ const IntroductionComponent = (props) => {
         invocation. This is accomplished with an asynchronous queue that awaits the completion of the 
         most recently invoked modifier before progressing to the next. 
       </p>
+    </div>
+    <div className='pageContents'>
+            <ul>
+            <p>CONTENTS</p>
+                <li>Background</li>
+                <li>How It Works</li>
+            </ul>
+    </div>
     </div>
   )
 }

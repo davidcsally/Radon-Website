@@ -189,20 +189,20 @@ exports.default = {
     },
     "operator": {
         "color": "#a67f59",
-        "background": "rgba(255, 255, 255, 0.5)"
+        "background": "rgb(238, 238, 238)"
     },
     "entity": {
         "color": "#a67f59",
-        "background": "rgba(255, 255, 255, 0.5)",
+        "background": "rgb(238, 238, 238)",
         "cursor": "help"
     },
     "url": {
         "color": "#a67f59",
-        "background": "rgba(255, 255, 255, 0.5)"
+        "background": "rgb(238, 238, 238)"
     },
     "variable": {
         "color": "#a67f59",
-        "background": "rgba(255, 255, 255, 0.5)"
+        "background": "rgb(238, 238, 238)"
     },
     "atrule": {
         "color": "#1990b8"
