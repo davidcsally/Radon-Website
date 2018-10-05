@@ -2,14 +2,13 @@ import React from 'react';
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-light";
 import js from 'react-syntax-highlighter/languages/prism/javascript';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import prism from 'react-syntax-highlighter/styles/prism/prism'; 
+// import prism from 'react-syntax-highlighter/styles/prism/prism'; 
 import coy from '../../codeHighlightTheme.js';
 import { Link } from 'react-router-dom';
- 
+
 registerLanguage('javascript', js);
 registerLanguage('jsx', jsx);
 // import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-
 //registerLanguage('jsx', jsx);
 
 const QuickStartComponent = (props) => {
@@ -42,20 +41,6 @@ const QuickStartComponent = (props) => {
   const buttons = 
 `<button onClick={() => this.props.updateName('Radon is cool!!!')}>Click Me</button>
 <button onClick={() => this.props.toggleStatus()}>Click Me Too</button>`;
-//   const otherInitializaModifiers = 
-// `AppState.initializeModifiers({
-//   arrayOfNames: {
-//     addNameToArray: (current, payload) => {
-//       current.push(payload);
-//       return current;
-//     },
-//     updateAName: (current, index, payload) => {
-//       return payload;
-//     }
-//   }
-// })`
-//   const anotherButton =
-// `<button onClick={() => updateAName(0, 'Hannah')}>Edit an Index!</button>`
   const combineNodes = 
 `import AppState from './appState';
 import NarbarState from './navbarState';
@@ -117,25 +102,6 @@ const silo = combineStateNodes(AppState, NavbarState, MainState);`
         must be passed into the function as Radon will fill the 'current' parameter by default.
       </p>
       <SyntaxHighlighter language='jsx' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{buttons}</SyntaxHighlighter>
-      {/* <p className='paragraph'>
-        The second modifier type is what helps Radon eliminate unnecessary re-rendering of frontend components.
-        This modifier type accepts three arguments and is used exclusively with objects. *Note that
-        initializeModifiers should only be called once. It is shown again here for demonstration purposes only*.
-      </p>
-      <SyntaxHighlighter codeTagProps={{className: 'spacingWithSH'}} language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={false} style={coy}>{otherInitializaModifiers}</SyntaxHighlighter>
-      <p className='paragraph'>
-        The modifier addNumberToArray is nothing new. Since the goal of the modifier is to edit the array as a 
-        whole, the entire array object is passed into the 'current' parameter. A modifier that edits the array 
-        will cause a re-render of any component that subscribes to the array. However, we may have
-        circumstances in which we only want to edit a single index within an array. In this case we create a
-        modifier that accepts an index. The 'current' value will always reflect arrayOfNumbers[index]. This 
-        will prevent a re-render of components listening to the entire array, and will instead only re-render
-        components listening to the specified index.
-      </p>
-      <p className='paragraph'>
-        Again, it is important to note that the 'current' parameter will be injected with state automatically.
-      </p>
-      <SyntaxHighlighter codeTagProps={{className: 'spacingWithSH'}} language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={false} style={coy}>{anotherButton}</SyntaxHighlighter> */}
       <p className='paragraph'>
         Once all StateNodes have been declared, they should be combined in the function combineStateNodes. The
         returned object is known as the silo.
