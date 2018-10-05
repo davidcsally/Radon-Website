@@ -1,6 +1,5 @@
 import React from 'react';
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-light";
-// import prism from 'react-syntax-highlighter/styles/prism/prism'; 
 import coy from '../../codeHighlightTheme.js';
 
 const AsyncModifiersComponent = () => {
