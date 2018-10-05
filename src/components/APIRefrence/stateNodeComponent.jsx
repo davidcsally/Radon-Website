@@ -2,17 +2,16 @@ import React from 'react';
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-light";
 import js from 'react-syntax-highlighter/languages/prism/javascript';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import prism from 'react-syntax-highlighter/styles/prism/prism';
 import coy from '../../codeHighlightTheme.js';
 
 registerLanguage('javascript', js);
 registerLanguage('jsx', jsx);
 
-const DeepDiveComponent = (props) => {
-    let codeSnip =
+const StateNodeComponent = (props) => {
+    const codeSnip =
         `import {StateNode} from 'radon';
 
-let rootNode = StateNode("RootNode");
+const rootNode = StateNode("RootNode");
 rootNode.initializeState({
     todoList: [],
     itemsTodo:0
@@ -21,7 +20,7 @@ rootNode.initializeState({
 rootNode.initializeModifiers({
     todoList: {
         addTodo: (current, payload) => {
-            let arrCopy = current.slice();
+            const arrCopy = current.slice();
             arrCopy.push(payload);
             return arrCopy;
         },
@@ -39,7 +38,7 @@ rootNode.initializeModifiers({
     }
 });
 
-let childNode = StateNode("ChildNode", "RootNode");`;
+const childNode = StateNode("ChildNode", "RootNode");`;
 
     return (
         <div className="docContent">
@@ -77,4 +76,4 @@ let childNode = StateNode("ChildNode", "RootNode");`;
     )
 }
 
-export default DeepDiveComponent;
+export default StateNodeComponent;
