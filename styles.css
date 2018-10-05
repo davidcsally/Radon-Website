@@ -15,6 +15,7 @@ body {
   background-size: cover;
   background-repeat: no repeat;
   height: 100%;
+  overflow: hidden;
 }
 
 #root {
@@ -90,7 +91,7 @@ body {
   width: 25%;
   min-width: 200px;
   outline: none;
-  background-color: rgba(69, 243, 243);
+  background-color: rgb(241, 241, 241);
 }
 
 .maintabs {
@@ -106,8 +107,33 @@ body {
 /* =======================> DOCS <======================= */
 
 #docs-component {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  height: 100%;
+}
+
+#docs-component > .header, #docs-component > div.content {
+  display: flex;
+  flex-direction: column;
+}
+
+#docs-component > div.content {
+  flex: 1;
+  flex-direction: row;
+}
+
+#docs-component > div.sidebar {
+  display: flex;
+  flex-direction: row;
+  width: 15%;
+  min-width: 250px;
+  flex: 1;
+}
+
+#docs-component > .content {
+  display: flex;
+  flex-direction: row;
 }
 
 #docs-text-component {
@@ -116,16 +142,61 @@ body {
   width: auto;
   overflow-x: hidden;
   overflow-y: scroll;
-  background-color: white;
+  background-color: #ffffff;
+}
+
+.selected {
+  color: rgb(255, 36, 36);
+}
+
+a, a:visited {
+  color: black;
 }
 
 /* ====================> Getting Started <================== */
 
 /* =======================> API Ref <======================= */
 
+div.docContent {
+  display: flex;
+}
+
+div.docContent > div.pageContents {
+  width: 400px;
+}
+
+div.docContent > div.pageContents > ul {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  list-style-type: none;
+  padding-top: 45px;
+  position: fixed;
+}
+
+div.docContent > div.pageContents > ul > p {
+  padding-bottom: 8px;
+  font-size: 10px;
+  color: rgb(133, 133, 133);
+}
+
+div.docContent > div.pageContents > ul > li {
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(61, 61, 61);
+  padding-top: 5px;
+}
+
 div.apiref {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: rgb(73, 73, 73);
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+div.apiref > hr {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  border-color: rgba(226, 226, 226, 0.301);
 }
 
 div.apiref > p > ol {
@@ -144,6 +215,8 @@ italics {
 
 .all-text-components {
   margin: 50px 100px;
+  min-width: 800px;
+  max-width: 800px;
 }
 
 h1 {

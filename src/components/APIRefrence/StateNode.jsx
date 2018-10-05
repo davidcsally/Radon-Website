@@ -1,33 +1,80 @@
 import React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { foundation } from 'react-syntax-highlighter/styles/hljs';
+import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-light";
+import js from 'react-syntax-highlighter/languages/prism/javascript';
+import jsx from 'react-syntax-highlighter/languages/prism/jsx';
+import prism from 'react-syntax-highlighter/styles/prism/prism';
+import coy from '../../codeHighlightTheme.js';
 
-const DeepDiveComponent = (props) => { 
-  let codeSnip =
-`import {StateNode} from 'radon';
+registerLanguage('javascript', js);
+registerLanguage('jsx', jsx);
+
+const DeepDiveComponent = (props) => {
+    let codeSnip =
+        `import {StateNode} from 'radon';
 
 let rootNode = StateNode("RootNode");
+rootNode.initializeState({
+    todoList: [],
+    itemsTodo:0
+});
+
+rootNode.initializeModifiers({
+    todoList: {
+        addTodo: (current, payload) => {
+            let arrCopy = current.slice();
+            arrCopy.push(payload);
+            return arrCopy;
+        },
+        finishTodo: (current, index, payload) => {
+            return {...current, finished: true};
+        }
+    },
+    itemsTodo: {
+        incrementItemsTodo: (current) => {
+            return current + 1;
+        },
+        decrementItemsTodo: (current) => {
+            return current - 1;
+        }
+    }
+});
+
 let childNode = StateNode("ChildNode", "RootNode");`;
-  return (
-    <div className='all-text-components apiref'>
-      <h1>StateNode</h1>
-      <p className='subheaders'>Creates a single node on the Radon state tree.</p>
-      <h3>Arguments</h3>
-        <p className='paragraph'>
-            <ol>
-                <li> <code className='copySection'>name</code> <italics>(String):</italics> The name of the node that is  to be created in the state tree.</li>
-                <li> <code className='copySection'>parent</code> <italics>(String):</italics> The name of the parent of the node that is being created, leave empty if root. </li>
-            </ol>
+
+    return (
+        <div className="docContent">
+        <div className='all-text-components apiref'>
+            <h1>StateNode</h1>
+            <hr />
+            <p className='subheaders'>Creates a single node on the Radon state tree.  Each of these Nodes have their own set of variables that they keep track of, 
+                along with a set of modifier which are able to update the values the node holds.</p>
+            <hr />
+            <h3>Arguments</h3>
+            <p className='paragraph'>
+                <ol>
+                    <li> <code className='copySection'>name</code> <italics>(String):</italics> The name of the node that is  to be created in the state tree.</li>
+                    <li> <code className='copySection'>parent</code> <italics>(String):</italics> The name of the parent of the node that is being created, leave empty if root. </li>
+                </ol>
+            </p>
+            <hr />
+            <h3>Returns</h3>
+            <p className='paragraph'>
+                (<code className='copySection'>StateNode</code>): An object with methods to define the initial state of the node, along with the modifiers of the node.
         </p>
-        <h3>Returns</h3>
-        <p className='paragraph'>
-            (<code className='copySection'>StateNode</code>): An object with methods to define the initial state of the node, along with the modifiers of the node.
-        </p>
-        <h3>Example</h3>
-        <div></div>
-        <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={foundation}>{codeSnip}</SyntaxHighlighter>
-    </div>
-  )
+            <hr />
+            <h3>Example</h3>
+            <SyntaxHighlighter language='javascript' lineNumberStyle={{ color: '#A9A9A9', paddingLeft: 5, paddingRight: 5 }} showLineNumbers={true} style={coy}>{codeSnip}</SyntaxHighlighter>
+        </div>
+        <div className='pageContents'>
+            <ul>
+            <p>CONTENTS</p>
+                <li>Arguments</li>
+                <li>Returns</li>
+                <li>Example</li>
+            </ul>
+        </div>
+        </div>
+    )
 }
 
 export default DeepDiveComponent;

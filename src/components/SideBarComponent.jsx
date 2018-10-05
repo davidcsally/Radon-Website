@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const SideBarComponent = (props) => { 
-
+  console.log(window.location.href.split('/').pop());
   return (
     <div id='sidebar'>
       <ExpansionPanel defaultExpanded={true}>
@@ -17,7 +17,7 @@ const SideBarComponent = (props) => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <Link to={props.path + '/introduction'} className='subtabs'>Introduction</Link><br/><br/>
+              <Link to={props.path + '/introduction'} className={'subtabs ' + (window.location.href.split('/').pop() === 'introduction' ? "selected" : '')}>Introduction</Link><br/><br/>
               <Link to={props.path + '/deep-dive'} className='subtabs'>Deep Dive</Link>
             </Typography>
           </ExpansionPanelDetails>

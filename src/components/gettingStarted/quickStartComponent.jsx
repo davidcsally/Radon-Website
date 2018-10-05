@@ -64,7 +64,8 @@ import mainState from './mainState';
 const silo = combineStateNodes(AppState, NavbarState, MainState);`
 
   return (
-    <div className='all-text-components'>
+    <div className="docContent">
+    <div className='all-text-components apiref'>
       <h1>Getting Started</h1>
       <p className='paragraph'>To install the stable version using npm as your package manager:</p>
       <code className='copySection'>npm install --save radon-js</code>
@@ -143,6 +144,13 @@ const silo = combineStateNodes(AppState, NavbarState, MainState);`
       <p className='paragraph'>
         Learn how to connect the silo object to <Link to={props.url + '/docs/react-guide'}>React.</Link>
       </p>
+    </div>
+        <div className='pageContents'>
+            <ul>
+            <p>CONTENTS</p>
+                <li>Initialize State</li>
+            </ul>
+        </div>
     </div>
   )
 }
