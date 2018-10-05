@@ -145,12 +145,12 @@ body {
   background-color: #ffffff;
 }
 
-.selected {
-  color: rgb(255, 36, 36);
-}
-
 a, a:visited {
   color: black;
+}
+
+a.selected {
+  color: rgb(255, 36, 36);
 }
 
 /* ====================> Getting Started <================== */
