@@ -2,7 +2,7 @@ import React from 'react';
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-light";
 import coy from '../../codeHighlightTheme.js';
 
-const AsyncModifiersComponent = () => {
+const AsyncModifiersComponent = (props) => {
 
   const promise =
 `AppState.initializeModifiers({
@@ -58,8 +58,8 @@ const AsyncModifiersComponent = () => {
       <div className='pageContents'>
           <ul>
           <p>CONTENTS</p>
-              <li>Promises</li>
-              <li>Async Await</li>
+              <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Promises</li>
+              <li className={props.currentContent === 1 ? "currentlyReading" : ""}>Async Await</li>
           </ul>
       </div>
     </div>

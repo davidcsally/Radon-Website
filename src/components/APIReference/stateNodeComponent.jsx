@@ -67,9 +67,9 @@ const childNode = new StateNode("ChildNode", "RootNode");`;
         <div className='pageContents'>
             <ul>
             <p>CONTENTS</p>
-                <li>Arguments</li>
-                <li>Returns</li>
-                <li>Example</li>
+                <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Arguments</li>
+                <li className={props.currentContent === 1 ? "currentlyReading" : ""}>Returns</li>
+                <li className={props.currentContent === 2 ? "currentlyReading" : ""}>Example</li>
             </ul>
         </div>
         </div>

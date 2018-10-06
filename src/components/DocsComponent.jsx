@@ -20,8 +20,8 @@ const DocsComponent = (props) => {
       </AppBar>
 
       <div className="content">
-        <SideBarComponent className="sidebar" path={props.match.path}/>
-        <DocsTextComponent className="documentation"/>
+        <SideBarComponent expandedMotivation={props.expandedMotivation} toggleMotivation={props.toggleMotivation} expandedGetStarted={props.expandedGetStarted} toggleGetStarted={props.toggleGetStarted} expandedAPIRef={props.expandedAPIRef} toggleAPIRef={props.toggleAPIRef} className="sidebar" path={props.match.path}/>
+        <DocsTextComponent currentContent={props.currentContent} setCurrentContent={props.setCurrentContent} resetCurrentContent={props.resetCurrentContent} className="documentation"/>
       </div>
     </div>
   )

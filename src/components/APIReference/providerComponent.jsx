@@ -47,8 +47,8 @@ ReactDOM.render(
       <div className='pageContents'>
         <ul>
         <p>CONTENTS</p>
-          <li>Props</li>
-          <li>Example</li>
+          <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Props</li>
+          <li className={props.currentContent === 1 ? "currentlyReading" : ""}>Example</li>
         </ul>
       </div>
     </div>

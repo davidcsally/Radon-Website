@@ -145,12 +145,21 @@ body {
   background-color: #ffffff;
 }
 
-a, a:visited {
+a.subtabs, a.subtabs:visited {
   color: black;
 }
 
-a.selected {
-  color: rgb(255, 36, 36);
+a.subtabs.selected {
+  color: rgb(27, 202, 188);
+}
+
+.all-text-components > p > a {
+  color:  rgb(27, 202, 188);
+  text-decoration: none;
+}
+
+.all-text-components > p > a:hover {
+  text-decoration: underline;
 }
 
 /* ====================> Appbar <================== */
@@ -189,6 +198,13 @@ div.docContent > div.pageContents > ul > li {
   font-weight: 600;
   color: rgb(61, 61, 61);
   padding-top: 5px;
+}
+
+div.docContent > div.pageContents > ul > li.currentlyReading {
+  color: rgb(27, 202, 188);
+  padding-left: 25px;
+  margin-left: -28px;
+  border-left: 2px solid rgb(27, 202, 188);
 }
 
 div.apiref {
