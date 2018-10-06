@@ -2,14 +2,11 @@ import React from 'react';
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-light";
 import js from 'react-syntax-highlighter/languages/prism/javascript';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-// import prism from 'react-syntax-highlighter/styles/prism/prism'; 
 import coy from '../../codeHighlightTheme.js';
 import { Link } from 'react-router-dom';
 
 registerLanguage('javascript', js);
 registerLanguage('jsx', jsx);
-// import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-//registerLanguage('jsx', jsx);
 
 const QuickStartComponent = (props) => {
 
