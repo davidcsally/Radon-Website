@@ -11,7 +11,7 @@ const StateNodeComponent = (props) => {
     const codeSnip =
         `import {StateNode} from 'radon';
 
-const rootNode = StateNode("RootNode");
+const rootNode = new StateNode("RootNode");
 rootNode.initializeState({
     todoList: [],
     itemsTodo:0
@@ -38,7 +38,7 @@ rootNode.initializeModifiers({
     }
 });
 
-const childNode = StateNode("ChildNode", "RootNode");`;
+const childNode = new StateNode("ChildNode", "RootNode");`;
 
     return (
         <div className="docContent">
