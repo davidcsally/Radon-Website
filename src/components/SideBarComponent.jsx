@@ -8,10 +8,9 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const SideBarComponent = (props) => { 
-  console.log(window.location.href.split('/').pop());
   return (
     <div id='sidebar'>
-      <ExpansionPanel defaultExpanded={true}>
+      <ExpansionPanel defaultExpanded={props.expandedMotivation} onChange={props.toggleMotivation}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>Motivation</Typography>
           </ExpansionPanelSummary>
@@ -23,7 +22,7 @@ const SideBarComponent = (props) => {
           </ExpansionPanelDetails>
         </ExpansionPanel>
 
-        <ExpansionPanel>
+        <ExpansionPanel defaultExpanded={props.expandedGetStarted} onChange={props.toggleGetStarted}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>Getting Started</Typography>
           </ExpansionPanelSummary>
@@ -37,7 +36,7 @@ const SideBarComponent = (props) => {
           </ExpansionPanelDetails>
         </ExpansionPanel>
 
-        <ExpansionPanel>
+        <ExpansionPanel defaultExpanded={props.expandedAPIRef} onChange={props.toggleAPIRef}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>API Reference</Typography>
           </ExpansionPanelSummary>
