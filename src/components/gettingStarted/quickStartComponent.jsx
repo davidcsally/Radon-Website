@@ -114,7 +114,7 @@ const silo = combineStateNodes(AppState, NavbarState, MainState);`
         <div className='pageContents'>
             <ul>
             <p>CONTENTS</p>
-                <li>Initialize State</li>
+                <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Initialize State</li>
             </ul>
         </div>
     </div>

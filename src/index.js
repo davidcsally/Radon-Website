@@ -35,12 +35,8 @@ const theme = createMuiTheme({
   },
 })
 
-const Index = () => {
-  return (
-    <MuiThemeProvider theme={theme}>
-      <App />
-    </MuiThemeProvider>
-  )
-}
-
-render(<Index />, document.getElementById('root'));
+render(
+<MuiThemeProvider theme={theme}>
+  <App />
+</MuiThemeProvider>,
+document.getElementById('root'));

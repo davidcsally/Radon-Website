@@ -130,9 +130,9 @@ const NestedObjectsComponent = (props) => {
       <div className='pageContents'>
           <ul>
           <p>CONTENTS</p>
-              <li>Primative Modifiers</li>
-              <li>Object Modifiers</li>
-              <li>Nested Object Modifiers</li>
+              <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Primative Modifiers</li>
+              <li className={props.currentContent === 1 ? "currentlyReading" : ""}>Object Modifiers</li>
+              <li className={props.currentContent === 2 ? "currentlyReading" : ""}>Nested Object Modifiers</li>
           </ul>
       </div>
     </div>

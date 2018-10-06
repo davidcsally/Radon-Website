@@ -19,7 +19,7 @@ const DocsComponent = (props) => {
 
       <div className="content">
         <SideBarComponent className="sidebar" path={props.match.path}/>
-        <DocsTextComponent className="documentation"/>
+        <DocsTextComponent currentContent={props.currentContent} setCurrentContent={props.setCurrentContent} resetCurrentContent={props.resetCurrentContent} className="documentation"/>
       </div>
     </div>
   )

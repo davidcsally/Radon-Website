@@ -66,9 +66,9 @@ const DeepDiveComponent = (props) => {
     <div className='pageContents'>
             <ul>
             <p>CONTENTS</p>
-                <li>Data Encapsulation</li>
-                <li>Component Rendering</li>
-                <li>Asynchronicity</li>
+                <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Data Encapsulation</li>
+                <li className={props.currentContent === 1 ? "currentlyReading" : ""}>Component Rendering</li>
+                <li className={props.currentContent === 2 ? "currentlyReading" : ""}>Asynchronicity</li>
             </ul>
     </div>
     </div>

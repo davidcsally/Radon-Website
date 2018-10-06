@@ -102,6 +102,15 @@ body {
   padding: 0px;
   text-decoration: none;
   padding: 20px;
+  color: black;
+}
+
+.subtabs:visited {
+  color: black;
+}
+
+.subtabs.selected {
+  color: rgb(255, 36, 36);
 }
 
 /* =======================> DOCS <======================= */
@@ -145,14 +154,6 @@ body {
   background-color: #ffffff;
 }
 
-a, a:visited {
-  color: black;
-}
-
-a.selected {
-  color: rgb(255, 36, 36);
-}
-
 /* ====================> Getting Started <================== */
 
 /* =======================> API Ref <======================= */
@@ -178,13 +179,22 @@ div.docContent > div.pageContents > ul > p {
   color: rgb(133, 133, 133);
 }
 
+div.docContent > div.pageContents > ul > li.currentlyReading {
+  color: rgb(255, 36, 36);
+  border-left: 2px solid rgb(255, 36, 36);
+  padding-left: 25px;
+  margin-left: -28px;
+}
+
 div.docContent > div.pageContents > ul > li {
   list-style-type: none;
   font-size: 12px;
   font-weight: 600;
   color: rgb(61, 61, 61);
-  padding-top: 5px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
 }
+
 
 div.apiref {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
