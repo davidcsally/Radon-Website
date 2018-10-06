@@ -67,11 +67,6 @@ class WipeCurrentContent extends React.Component{
     }) 
   }
 
-
-  componentDidMount() {
-
-  }
-
   render() {
     return (
         this.props.children

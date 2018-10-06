@@ -153,6 +153,15 @@ a.subtabs.selected {
   color: rgb(27, 202, 188);
 }
 
+.all-text-components > p > a {
+  color:  rgb(27, 202, 188);
+  text-decoration: none;
+}
+
+.all-text-components > p > a:hover {
+  text-decoration: underline;
+}
+
 /* ====================> Appbar <================== */
 
 #appbar-radon-logo {
