@@ -1,6 +1,8 @@
 import React from 'react';  
 import SideBarComponent from './SideBarComponent';
 import DocsTextComponent from './DocsTextComponent';
+import { Link } from 'react-router-dom'
+import logo from '../cyanWithGlow.jpg';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -12,7 +14,7 @@ const DocsComponent = (props) => {
       <AppBar className="header" position="static" color="secondary">
         <Toolbar>
           <Typography variant="title" color="inherit">
-            Radon
+            <Link to='/'><img id='appbar-radon-logo' src={ logo }></img></Link>
           </Typography>
         </Toolbar>
       </AppBar>

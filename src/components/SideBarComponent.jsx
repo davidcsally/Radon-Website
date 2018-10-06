@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const SideBarComponent = (props) => { 
-  console.log(window.location.href.split('/').pop());
   return (
     <div id='sidebar'>
       <ExpansionPanel defaultExpanded={true}>
