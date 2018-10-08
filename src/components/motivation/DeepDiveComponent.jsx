@@ -1,4 +1,5 @@
 import React from 'react';  
+import { Link } from 'react-router-dom';
 
 const DeepDiveComponent = (props) => { 
   return (
@@ -6,7 +7,7 @@ const DeepDiveComponent = (props) => {
     <div className='all-text-components apiref' id='motivation-component'>
       <h1>Deep Dive</h1>
       <p className='subheaders'>A deeper look into how Radon works.</p>
-      <h3>Data Encapsulation</h3>
+      <h3 id='data-encapsulation'>Data Encapsulation</h3>
         <p className='paragraph'>
           One of the first goals of Radon was to implement an object oriented state manager capable of data 
           encapsulation. Many state managers allow pieces of state to be accessible by any component or module, 
@@ -43,7 +44,7 @@ const DeepDiveComponent = (props) => {
           sibling’s or children's data. Thus, varying pieces of state are exposed where they are needed, and hidden 
           where they are not.
         </p>
-        <h3>Component Rendering Linked to Objects in State</h3>
+        <h3 id='component-rendering'>Component Rendering Linked to Objects in State</h3>
         <p className='paragraph'>
           Another feature of Radon intends to remove unnecessary re-rendering that can emerge from modifying 
           objects in state. In other state management systems, modifying a single key/value pair in a plain object 
@@ -52,7 +53,7 @@ const DeepDiveComponent = (props) => {
           The object deconstruction feature allows for direct modification of these indices/pairs and triggers a 
           re-render of only the component listening to that particular data point.
         </p>
-        <h3>Asynchronous Modifications to State</h3>
+        <h3 id='asychronicity'>Asynchronous Modifications to State</h3>
         <p className='paragraph'>
           Modifiers are functions written by the developer that can only modify a single state variable. 
           Developers have the option to create an asynchronous modifier which may seem problematic if multiple 
@@ -66,9 +67,9 @@ const DeepDiveComponent = (props) => {
     <div className='pageContents'>
             <ul>
             <p>CONTENTS</p>
-                <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Data Encapsulation</li>
-                <li className={props.currentContent === 1 ? "currentlyReading" : ""}>Component Rendering</li>
-                <li className={props.currentContent === 2 ? "currentlyReading" : ""}>Asynchronicity</li>
+                <li className={props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#data-encapsulation'}>Data Encapsulation</Link></li>
+                <li className={props.currentContent === 1 ? "currentlyReading" : ""}><Link to={'#component-rendering'}>Component Rendering</Link></li>
+                <li className={props.currentContent === 2 ? "currentlyReading" : ""}><Link to={'#asychronicity'}>Asynchronicity</Link></li>
             </ul>
     </div>
     </div>

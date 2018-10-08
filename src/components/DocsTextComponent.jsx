@@ -28,7 +28,6 @@ class DocsTextComponent extends React.Component{
       }
     }
     if(currentHighest !== this.props.currentContent){
-      console.log(document.getElementById('docs-text-component').scrollTop);
       this.props.setCurrentContent(currentHighest, document.getElementById('docs-text-component').scrollTop);
     }
   }

@@ -16,8 +16,8 @@ const SideBarComponent = (props) => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <Link to={props.path + '/introduction'} className={'subtabs ' + (window.location.href.split('/').pop() === 'introduction' ? "selected" : '')}>Introduction</Link><br/><br/>
-              <Link to={props.path + '/deep-dive'} className={'subtabs ' + (window.location.href.split('/').pop() === 'deep-dive' ? "selected" : '')}>Deep Dive</Link>
+              <Link to={props.path + '/introduction'} className={'subtabs ' + (window.location.href.split('/').pop().split('#')[0] === 'introduction' ? "selected" : '')}>Introduction</Link><br/><br/>
+              <Link to={props.path + '/deep-dive'} className={'subtabs ' + (window.location.href.split('/').pop().split('#')[0] === 'deep-dive' ? "selected" : '')}>Deep Dive</Link>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -28,10 +28,10 @@ const SideBarComponent = (props) => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <Link to={props.path + '/quick-start'} className={'subtabs '+ (window.location.href.split('/').pop() === 'quick-start' ? "selected" : '')}>Quick Start</Link><br/><br/>
-              <Link to={props.path + '/react-guide'} className={'subtabs ' + (window.location.href.split('/').pop() === 'react-guide' ? "selected" : '')}>React Guide</Link><br/><br/>
-              <Link to={props.path + '/nested-objects'} className={'subtabs '+ (window.location.href.split('/').pop() === 'nested-objects' ? "selected" : '')}>Nested Objects</Link><br/><br/>
-              <Link to={props.path + '/async-modifiers'} className={'subtabs '+ (window.location.href.split('/').pop() === 'async-modifiers' ? "selected" : '')}>Async Modifiers</Link>
+              <Link to={props.path + '/quick-start'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'quick-start' ? "selected" : '')}>Quick Start</Link><br/><br/>
+              <Link to={props.path + '/react-guide'} className={'subtabs ' + (window.location.href.split('/').pop().split('#')[0] === 'react-guide' ? "selected" : '')}>React Guide</Link><br/><br/>
+              <Link to={props.path + '/nested-objects'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'nested-objects' ? "selected" : '')}>Nested Objects</Link><br/><br/>
+              <Link to={props.path + '/async-modifiers'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'async-modifiers' ? "selected" : '')}>Async Modifiers</Link>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -42,11 +42,11 @@ const SideBarComponent = (props) => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              <Link to={props.path + '/stateNode'} className={'subtabs '+ (window.location.href.split('/').pop() === 'stateNode' ? "selected" : '')}>StateNode</Link><br/><br/>
-              <Link to={props.path + '/combineNodes'} className={'subtabs '+ (window.location.href.split('/').pop() === 'combineNodes' ? "selected" : '')}>combineNodes</Link><br/><br/>
-              <Link to={props.path + '/Provider'} className={'subtabs '+ (window.location.href.split('/').pop() === 'Provider' ? "selected" : '')}>Provider</Link><br/><br/>
-              <Link to={props.path + '/bindToSilo'} className={'subtabs '+ (window.location.href.split('/').pop() === 'bindToSilo' ? "selected" : '')}>bindToSilo</Link><br/><br/>
-              <Link to={props.path + '/bindObjectToSilo'} className={'subtabs '+ (window.location.href.split('/').pop() === 'bindObjectToSilo' ? "selected" : '')}>bindObjectToSilo</Link>
+              <Link to={props.path + '/stateNode'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'stateNode' ? "selected" : '')}>StateNode</Link><br/><br/>
+              <Link to={props.path + '/combineNodes'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'combineNodes' ? "selected" : '')}>combineNodes</Link><br/><br/>
+              <Link to={props.path + '/Provider'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'Provider' ? "selected" : '')}>Provider</Link><br/><br/>
+              <Link to={props.path + '/bindToSilo'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'bindToSilo' ? "selected" : '')}>bindToSilo</Link><br/><br/>
+              <Link to={props.path + '/bindObjectToSilo'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'bindObjectToSilo' ? "selected" : '')}>bindObjectToSilo</Link>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>

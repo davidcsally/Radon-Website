@@ -3,6 +3,7 @@ import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/pr
 import js from 'react-syntax-highlighter/languages/prism/javascript';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import coy from '../../codeHighlightTheme.js';
+import { Link } from 'react-router-dom';
 
 registerLanguage('javascript', js);
 registerLanguage('jsx', jsx);
@@ -48,7 +49,7 @@ const childNode = new StateNode("ChildNode", "RootNode");`;
             <p className='subheaders'>Creates a single node on the Radon state tree.  Each of these Nodes have their own set of variables that they keep track of, 
                 along with a set of modifier which are able to update the values the node holds.</p>
             <hr />
-            <h3>Arguments</h3>
+            <h3 id='arguments'>Arguments</h3>
             <p className='paragraph'>
                 <ol>
                     <li> <code className='copySection'>name</code> <italics>(String):</italics> The name of the node that is  to be created in the state tree.</li>
@@ -56,20 +57,20 @@ const childNode = new StateNode("ChildNode", "RootNode");`;
                 </ol>
             </p>
             <hr />
-            <h3>Returns</h3>
+            <h3 id='returns'>Returns</h3>
             <p className='paragraph'>
                 (<code className='copySection'>StateNode</code>): An object with methods to define the initial state of the node, along with the modifiers of the node.
         </p>
             <hr />
-            <h3>Example</h3>
+            <h3 id='example'>Example</h3>
             <SyntaxHighlighter language='javascript' lineNumberStyle={{ color: '#A9A9A9', paddingLeft: 5, paddingRight: 5 }} showLineNumbers={true} style={coy}>{codeSnip}</SyntaxHighlighter>
         </div>
         <div className='pageContents'>
             <ul>
             <p>CONTENTS</p>
-                <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Arguments</li>
-                <li className={props.currentContent === 1 ? "currentlyReading" : ""}>Returns</li>
-                <li className={props.currentContent === 2 ? "currentlyReading" : ""}>Example</li>
+                <li className={props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#argument'}>Arguments</Link></li>
+                <li className={props.currentContent === 1 ? "currentlyReading" : ""}><Link to={'#returns'}>Returns</Link></li>
+                <li className={props.currentContent === 2 ? "currentlyReading" : ""}><Link to={'#example'}>Example</Link></li>
             </ul>
         </div>
         </div>

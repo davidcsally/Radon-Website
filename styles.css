@@ -192,15 +192,28 @@ div.docContent > div.pageContents > ul > p {
   color: rgb(133, 133, 133);
 }
 
-div.docContent > div.pageContents > ul > li {
+div.docContent > div.pageContents > ul > li > a{
   list-style-type: none;
+  text-decoration: none;
   font-size: 12px;
   font-weight: 600;
   color: rgb(61, 61, 61);
-  padding-top: 5px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
 }
 
-div.docContent > div.pageContents > ul > li.currentlyReading {
+div.docContent > div.pageContents > ul > li > a:hover{
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(27, 202, 188);
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
+div.docContent > div.pageContents > ul > li.currentlyReading > a {
+  text-decoration: none;
   color: rgb(27, 202, 188);
   padding-left: 25px;
   margin-left: -28px;

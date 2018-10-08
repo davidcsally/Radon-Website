@@ -1,4 +1,5 @@
 import React from 'react';  
+import { Link } from 'react-router-dom';
 
 class IntroductionComponent extends React.Component{ 
   constructor(props) {
@@ -11,7 +12,13 @@ class IntroductionComponent extends React.Component{
       <div className='all-text-components apiref' id='motivation-component'>
         <h1>Introduction</h1>
         <p className='subheaders'>An abstract look into Radon.</p>
-        <h3>Background</h3>
+        <p className='paragraph'>A predictable state management library that employs data encapsulation, along with 
+        a state tree to encourage logically obvious state structures.  This along with Time Travel debugging makes the 
+        Radon library a ideal tool for designing state with complex relationships.</p>
+        <img src='https://img.shields.io/travis/com/radonjs/Radon/master.svg?style=flat-square'/>
+        <img src="https://camo.githubusercontent.com/17256699f80f9a741d0a009cd672030498f0b2bd/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f7261646f6e2d6a732e7376673f7374796c653d666c61742d737175617265" alt="npm" data-canonical-src="https://img.shields.io/npm/v/radon-js.svg?style=flat-square" style={{maxWidth: "100%", paddingLeft: 15}}/>
+        <hr/>
+        <h3 id='background'>Background</h3>
         <p className='paragraph'>
           When it comes to adopting a state manager for frontend frameworks, considerations for scope are rarely 
           addressed. Popular state managers such as redux and mobx do not address the issue, and yet scope is a 
@@ -32,7 +39,7 @@ class IntroductionComponent extends React.Component{
           modifications. Radon can natively handle asynchronous modifier functions and will ensure that all 
           state updates to a particular variable will occur in a predictable and orderly manner. 
         </p>
-        <h3>How It Works</h3>
+        <h3 id='howitworks'>How It Works</h3>
         <p className='paragraph'>
           Radon is built using a tree data structure. Pieces of state are stored in specially designed nodes 
           and are organized in a way that parallels the component tree of many common frontend frameworks such 
@@ -55,8 +62,8 @@ class IntroductionComponent extends React.Component{
       <div className='pageContents'>
               <ul>
               <p>CONTENTS</p>
-                <li className={this.props.currentContent === 0 ? "currentlyReading" : ""}>Background</li>
-                <li className={this.props.currentContent === 1 ? "currentlyReading" : ""}>How It Works</li>
+                <li className={this.props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#background'}>Background</Link></li>
+                <li className={this.props.currentContent === 1 ? "currentlyReading" : ""}><Link to={'#howitworks'}>How It Works</Link></li>
               </ul>
       </div>
       </div>
