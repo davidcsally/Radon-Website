@@ -3,6 +3,7 @@ import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/pr
 import js from 'react-syntax-highlighter/languages/prism/javascript';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import coy from '../../codeHighlightTheme.js';
+import { Link } from 'react-router-dom';
 
 registerLanguage('javascript', js);
 registerLanguage('jsx', jsx);
@@ -27,27 +28,27 @@ const silo = combineNodes(AppState, NavbarState, MainState);`
               a parent that does not exist as a StateNode will not be included in the Silo.
             </p>
             <hr />
-            <h3>Arguments</h3>
+            <h3 id='arguments'>Arguments</h3>
             <p className='paragraph'>
               <ol>
                 <li> <code className='copySection'>...args</code> <italics>(StateNode[]):</italics> A list of every StateNode listed in any order</li>
               </ol>
             </p>
             <hr />
-            <h3>Returns</h3>
+            <h3 id='returns'>Returns</h3>
             <p className='paragraph'>
                 (<code className='copySection'>silo</code>): The state tree, ready to be included in a Provider tag
             </p>
             <hr />
-            <h3>Example</h3>
+            <h3 id='example'>Example</h3>
             <SyntaxHighlighter language='javascript' lineNumberStyle={{ color: '#A9A9A9', paddingLeft: 5, paddingRight: 5 }} showLineNumbers={true} style={coy}>{combineNodesExample}</SyntaxHighlighter>
         </div>
         <div className='pageContents'>
             <ul>
             <p>CONTENTS</p>
-                <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Arguments</li>
-                <li className={props.currentContent === 1 ? "currentlyReading" : ""}>Returns</li>
-                <li className={props.currentContent === 2 ? "currentlyReading" : ""}>Example</li>
+                <li className={props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#arguments'}>Arguments</Link></li>
+                <li className={props.currentContent === 1 ? "currentlyReading" : ""}><Link to={'#returns'}>Returns</Link></li>
+                <li className={props.currentContent === 2 ? "currentlyReading" : ""}><Link to={'#example'}>Example</Link></li>
             </ul>
         </div>
       </div>
