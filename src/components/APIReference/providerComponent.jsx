@@ -3,6 +3,7 @@ import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/pr
 import js from 'react-syntax-highlighter/languages/prism/javascript';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import coy from '../../codeHighlightTheme.js';
+import { Link } from 'react-router-dom';
 
 registerLanguage('javascript', js);
 registerLanguage('jsx', jsx);
@@ -34,7 +35,7 @@ ReactDOM.render(
           as the top level component, surrounding App.
         </p>
         <hr />
-        <h3>Props</h3>
+        <h3 id='props'>Props</h3>
         <p className='paragraph'>
           <ol>
             <li> <code className='copySection'>silo</code> <italics>(Radon silo):</italics>The source of state in your application.</li>
@@ -42,13 +43,14 @@ ReactDOM.render(
           </ol>
         </p>
         <hr />
+        <h3 id='example'>Example</h3>
         <SyntaxHighlighter language='javascript' lineNumberStyle={{ color: '#A9A9A9', paddingLeft: 5, paddingRight: 5 }} showLineNumbers={true} style={coy}>{provider}</SyntaxHighlighter>
       </div>
       <div className='pageContents'>
         <ul>
         <p>CONTENTS</p>
-          <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Props</li>
-          <li className={props.currentContent === 1 ? "currentlyReading" : ""}>Example</li>
+          <li className={props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#props'}>Props</Link></li>
+          <li className={props.currentContent === 1 ? "currentlyReading" : ""}><Link to={'#example'}>Example</Link></li>
         </ul>
       </div>
     </div>

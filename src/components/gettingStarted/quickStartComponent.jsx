@@ -60,7 +60,7 @@ const silo = combineStateNodes(AppState, NavbarState, MainState);`
         bundler like Webpack, Parcel, or Rollup to utilize Radon with React.</p>
 
 
-      <h2>Initialize State</h2>
+      <h3 id='initialize-state'>Initialize State</h3>
       <br/>
       <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{importRadon}</SyntaxHighlighter>
       <p className='paragraph'>
@@ -111,7 +111,7 @@ const silo = combineStateNodes(AppState, NavbarState, MainState);`
         <div className='pageContents'>
             <ul>
             <p>CONTENTS</p>
-                <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Initialize State</li>
+                <li className={props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#initialize-state'}>Initialize State</Link></li>
             </ul>
         </div>
     </div>

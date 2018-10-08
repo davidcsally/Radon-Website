@@ -3,6 +3,7 @@ import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/pr
 import js from 'react-syntax-highlighter/languages/prism/javascript';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import coy from '../../codeHighlightTheme.js';
+import { Link } from 'react-router-dom';
 
 registerLanguage('javascript', js);
 registerLanguage('jsx', jsx);
@@ -67,7 +68,7 @@ const NestedObjectsComponent = (props) => {
     <div className="docContent">
       <div className='all-text-components apiref'>
         <h1>Adding Modifiers to State</h1>
-        <h3 className='subheaders'>Adding Modifiers to Primitives</h3>
+        <h3 id='primative-modifiers' className='subheaders'>Adding Modifiers to Primitives</h3>
         <p className='paragraph'>
           Modifiers are functions that modify a single variable in state. Modifiers are attached to variables by
           calling the method initializeModifiers which also takes an object as an argument. The keys of the
@@ -84,7 +85,7 @@ const NestedObjectsComponent = (props) => {
           must be passed into the function as Radon will fill the 'current' parameter by default.
         </p>
         <SyntaxHighlighter language='jsx' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{buttons}</SyntaxHighlighter>
-        <h3 className='subheaders'>Adding Modifiers to Objects</h3>
+        <h3 id='object-modifiers' className='subheaders'>Adding Modifiers to Objects</h3>
         <p className='paragraph'>
           The second modifier type is what helps Radon eliminate unnecessary re-rendering of frontend components.
           This modifier type accepts three arguments and is used exclusively with objects.
@@ -103,7 +104,7 @@ const NestedObjectsComponent = (props) => {
           Again, it is important to note that the 'current' parameter will be injected with state automatically.
         </p>
         <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{anotherButton}</SyntaxHighlighter>
-        <h3 className='subheaders'>Adding Modifiers to Nested Objects</h3>
+        <h3 id='nested-object-modifiers' className='subheaders'>Adding Modifiers to Nested Objects</h3>
         <p className='paragraph'>
           It is possible to add modifiers to deelpy nested objects, although it will take a more precise index.
           Deeply nested, deconstructed objects are stored in the silo via an address that is a combination of keys
@@ -130,9 +131,9 @@ const NestedObjectsComponent = (props) => {
       <div className='pageContents'>
           <ul>
           <p>CONTENTS</p>
-              <li className={props.currentContent === 0 ? "currentlyReading" : ""}>Primative Modifiers</li>
-              <li className={props.currentContent === 1 ? "currentlyReading" : ""}>Object Modifiers</li>
-              <li className={props.currentContent === 2 ? "currentlyReading" : ""}>Nested Object Modifiers</li>
+              <li className={props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#primative-modifiers'}>Primative Modifiers</Link></li>
+              <li className={props.currentContent === 1 ? "currentlyReading" : ""}><Link to={'#object-modifiers'}>Object Modifiers</Link></li>
+              <li className={props.currentContent === 2 ? "currentlyReading" : ""}><Link to={'#nested-object-modifiers'}>Nested Object Modifiers</Link></li>
           </ul>
       </div>
     </div>
