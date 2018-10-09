@@ -10,6 +10,7 @@ import StateNodeComponent from './APIReference/stateNodeComponent';
 import CombineNodesComponent from './APIReference/combineNodesComponent';
 import ProviderComponent from './APIReference/providerComponent';
 import BindToSiloComponent from './APIReference/bindToSiloComponent';
+import BindObjectToSiloComponent from './APIReference/bindObjectToSiloComponent';
 
 class DocsTextComponent extends React.Component{
 
@@ -47,6 +48,7 @@ class DocsTextComponent extends React.Component{
           <Route exact path='/docs/combineNodes' component={() => <CombineNodesComponent currentContent={this.props.currentContent}/>}></Route>
           <Route exact path='/docs/provider' component={() => <ProviderComponent currentContent={this.props.currentContent} />}></Route>
           <Route exact path='/docs/bindToSilo' component={() => <BindToSiloComponent currentContent={this.props.currentContent} />}></Route>
+          <Route exact path='/docs/bindObjectToSilo' component={() => <BindObjectToSiloComponent currentContent={this.props.currentContent} />}></Route>
           <Redirect from='/docs' to='/docs/introduction'></Redirect>
         </Switch>
       </div>

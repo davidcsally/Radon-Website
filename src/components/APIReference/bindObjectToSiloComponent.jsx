@@ -8,30 +8,23 @@ import {Link} from 'react-router-dom';
 registerLanguage('javascript', js);
 registerLanguage('jsx', jsx);
 
-const BindToSiloComponent = (props) => {
+const BindObjectToSilo = (props) => {
 
   const bindToSiloEx = 
-`import React from 'react';
-import { bindToSilo } from 'react-radon'
-
-const ReactComponent = (props) => {
-  return (
-    <div>
-      {props.message}
-    </div>
-  )
-}
-
-export default bindToSilo(ReactComponent);`
+`poop`
 
   return (
     <div className="docContent">
       <div className='all-text-components apiref'>
-          <h1>bindToSilo</h1>
+          <h1>bindObjectToSilo</h1>
           <hr />
           <p className='subheaders'>
             Connects a React component to the Silo. It does not modify the component but instead returns
             a new component that has state accessible through props.
+          </p>
+          <p className='subheaders'>
+            The method bindToSiloObject should only be wrapped around components intended to
+            subscribe to indices of an array or key/value pairs of an object.
           </p>
           <hr />
           <h3 id='arguments'>Arguments</h3>
@@ -61,4 +54,4 @@ export default bindToSilo(ReactComponent);`
   )
 }
 
-export default BindToSiloComponent;
+export default BindObjectToSilo;
