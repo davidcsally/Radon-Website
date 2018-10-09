@@ -38,17 +38,17 @@ class DocsTextComponent extends React.Component{
     return (
       <div id='docs-text-component' onScroll={this.handleScroll}>
         <Switch>
-          <Route exact path='/docs/introduction' component={() => <IntroductionComponent currentContent={this.props.currentContent}/>}></Route>
-          <Route exact path='/docs/deep-dive' component={() =><DeepDiveComponent currentContent={this.props.currentContent}/>}></Route>
-          <Route exact path='/docs/quick-start' component={() => <QuickStartComponent currentContent={this.props.currentContent}/>}></Route>
-          <Route exact path='/docs/react-guide' component={() => <ReactGuideComponent currentContent={this.props.currentContent} />}></Route>
-          <Route exact path='/docs/nested-objects' component={() => <NestedObjectsComponent currentContent={this.props.currentContent} />}></Route>
-          <Route exact path='/docs/async-modifiers' component={() => <AsyncModifiersComponent currentContent={this.props.currentContent} />}></Route>
-          <Route exact path='/docs/stateNode' component={() => <StateNodeComponent currentContent={this.props.currentContent}/>}></Route>
-          <Route exact path='/docs/combineNodes' component={() => <CombineNodesComponent currentContent={this.props.currentContent}/>}></Route>
-          <Route exact path='/docs/provider' component={() => <ProviderComponent currentContent={this.props.currentContent} />}></Route>
-          <Route exact path='/docs/bindToSilo' component={() => <BindToSiloComponent currentContent={this.props.currentContent} />}></Route>
-          <Route exact path='/docs/bindObjectToSilo' component={() => <BindObjectToSiloComponent currentContent={this.props.currentContent} />}></Route>
+          <Route path='/docs/introduction' component={() => <IntroductionComponent currentContent={this.props.currentContent}/>}></Route>
+          <Route path='/docs/deep-dive' component={() =><DeepDiveComponent currentContent={this.props.currentContent}/>}></Route>
+          <Route path='/docs/quick-start' component={() => <QuickStartComponent currentContent={this.props.currentContent}/>}></Route>
+          <Route path='/docs/react-guide' component={() => <ReactGuideComponent currentContent={this.props.currentContent} />}></Route>
+          <Route path='/docs/nested-objects' component={() => <NestedObjectsComponent currentContent={this.props.currentContent} />}></Route>
+          <Route path='/docs/async-modifiers' component={() => <AsyncModifiersComponent currentContent={this.props.currentContent} />}></Route>
+          <Route path='/docs/stateNode' component={() => <StateNodeComponent currentContent={this.props.currentContent}/>}></Route>
+          <Route path='/docs/combineNodes' component={() => <CombineNodesComponent currentContent={this.props.currentContent}/>}></Route>
+          <Route path='/docs/provider' component={() => <ProviderComponent currentContent={this.props.currentContent} />}></Route>
+          <Route path='/docs/bindToSilo' component={() => <BindToSiloComponent currentContent={this.props.currentContent} />}></Route>
+          <Route path='/docs/bindObjectToSilo' component={() => <BindObjectToSiloComponent currentContent={this.props.currentContent} />}></Route>
           <Redirect from='/docs' to='/docs/introduction'></Redirect>
         </Switch>
       </div>
