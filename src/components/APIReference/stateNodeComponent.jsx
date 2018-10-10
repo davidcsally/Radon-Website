@@ -9,7 +9,7 @@ registerLanguage('javascript', js);
 registerLanguage('jsx', jsx);
 
 const StateNodeComponent = (props) => {
-    const codeSnip =
+  const codeSnip =
         `import {StateNode} from 'radon';
 
 const rootNode = new StateNode("RootNode");

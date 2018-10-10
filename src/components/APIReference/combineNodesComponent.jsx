@@ -14,6 +14,7 @@ const CombineNodesComponent = (props) => {
 `import AppState from './AppState';
 import NavbarState from './NarbarState';
 import MainState from './MainState';
+import { combineNodes } from 'react-js';
 
 const silo = combineNodes(AppState, NavbarState, MainState);`
 
@@ -46,9 +47,9 @@ const silo = combineNodes(AppState, NavbarState, MainState);`
         <div className='pageContents'>
             <ul>
             <p>CONTENTS</p>
-                <li className={props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#arguments'}>Arguments</Link></li>
-                <li className={props.currentContent === 1 ? "currentlyReading" : ""}><Link to={'#returns'}>Returns</Link></li>
-                <li className={props.currentContent === 2 ? "currentlyReading" : ""}><Link to={'#example'}>Example</Link></li>
+              <li className={props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#arguments'}>Arguments</Link></li>
+              <li className={props.currentContent === 1 ? "currentlyReading" : ""}><Link to={'#returns'}>Returns</Link></li>
+              <li className={props.currentContent === 2 ? "currentlyReading" : ""}><Link to={'#example'}>Example</Link></li>
             </ul>
         </div>
       </div>

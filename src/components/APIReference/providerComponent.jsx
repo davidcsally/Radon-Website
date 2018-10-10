@@ -15,6 +15,8 @@ const ProviderComponent = (props) => {
 import AppState from './AppState';
 import NavbarState from './NarbarState';
 import MainState from './MainState';
+import { combineNodes } from 'radon-js';
+import { Provider } from 'react-radon';
 
 const silo = combineNodes(AppState, NavbarState, MainState);
 
