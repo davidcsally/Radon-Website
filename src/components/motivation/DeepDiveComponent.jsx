@@ -10,17 +10,18 @@ const DeepDiveComponent = (props) => {
       <h3 id='data-encapsulation'>Data Encapsulation</h3>
         <p className='paragraph'>
           One of the first goals of Radon was to implement an object oriented state manager capable of data 
-          encapsulation. Many state managers allow pieces of state to be accessible by any component or module, 
-          and with that access follows modification allowances. This inherently conflicts with a ubiquitous object 
-          oriented programming practice: limiting scope. Limiting the scope of a variable or method provides better 
-          context for its purpose and makes it easier to reason about. Plus, there's the added bonus of protecting 
-          data from being modified by script that has several degrees of separation. Many programming languages have 
-          native features to handle data encapsulation such as privatized class attributes and methods. Unfortunately, 
-          Javascript doesn't have the same privatization features held by universal languages such as Java and C/C++. 
-          Therefore, the data encapsulation feature of Radon needed to be derived by other means.
+          encapsulation. Many state managers allow pieces of state to be accessible and modifiable by any component 
+          or module built on the frontend. These allowances inherently conflict with a ubiquitous object 
+          oriented programming practice: limiting variable and functional scope. Limiting the scope of a variable or 
+          method provides better context for its purpose and makes it easier to reason about. Plus, there's an added 
+          bonus of protecting data from being modified by script that has several degrees of separation from the 
+          original definition. Many programming languages have native features to handle data encapsulation such 
+          as privatized class attributes and methods. Unfortunately, Javascript does not have the same privatization 
+          features held by universal languages such as Java and C/C++. Therefore, the data encapsulation feature of 
+          Radon needed to be derived by other means.
         </p>
         <p className='paragraph'>
-          To understand encapsulation in Radon, it is first important to understand how the data is organized. 
+          To understand encapsulation in Radon it is first important to understand how the data is organized. 
           Radon is built using a tree data structure. Pieces of state are stored in specially designed nodes 
           and are organized in a way that parallels the component tree of many common frontend frameworks such 
           as React or Vue. For example, if a developer created an initial App component that needed access to 
@@ -34,7 +35,7 @@ const DeepDiveComponent = (props) => {
           can be said for the State Tree. AppState is our root, with NavbarState and MainState branching below.
         </p>
         <p className='paragraph'>
-          But what does this mean for data encapsulation? The intention for the State Tree is for state nodes 
+          But what does this mean for data encapsulation? The intention of the State Tree is for state nodes 
           to share their data and modifiers with corresponding frontend components. However, this implementation 
           alone would be too constricting of the data. Therefore, frontend components are not only able to access 
           the data from their corresponding state nodes, but also the data from its parent, grandparent, and any 

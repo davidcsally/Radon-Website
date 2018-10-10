@@ -46,15 +46,17 @@ const childNode = new StateNode("ChildNode", "RootNode");`;
         <div className='all-text-components apiref'>
             <h1>StateNode</h1>
             <hr />
-            <p className='subheaders'>Creates a single node on the Radon state tree.  Each of these Nodes have their own set of variables that they keep track of, 
-                along with a set of modifier which are able to update the values the node holds.</p>
+            <p className='subheaders'>
+              Creates a single node in the Radon State Tree. Each Node has its own set of variables and modifiers
+              with permission to access variables and modifiers in parent nodes. 
+            </p>
             <hr />
             <h3 id='arguments'>Arguments</h3>
             <p className='paragraph'>
-                <ol>
-                    <li> <code className='copySection'>name</code> <italics>(String):</italics> The name of the node that is  to be created in the state tree.</li>
-                    <li> <code className='copySection'>parent</code> <italics>(String):</italics> The name of the parent of the node that is being created, leave empty if root. </li>
-                </ol>
+              <ol>
+                <li> <code className='copySection'>name</code> <italics>(String):</italics> The name of the node to be created in the state tree.</li>
+                <li> <code className='copySection'>parent</code> <italics>(String):</italics> The name of the parent of the node that is being created, leave empty if root.</li>
+              </ol>
             </p>
             <hr />
             <h3 id='returns'>Returns</h3>
