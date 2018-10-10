@@ -36,7 +36,7 @@ const QuickStartComponent = (props) => {
   }
 });`;
   const buttons = 
-`<button onClick={() => this.props.name.updateName('Radon is cool!!!')}>Click Me</button>
+`<button onClick={() => this.props.name.updateName('Hi!')}>Click Me</button>
 <button onClick={() => this.props.status.toggleStatus()}>Click Me Too</button>`;
   const combineNodes = 
 `import AppState from './appState';
@@ -54,7 +54,7 @@ const silo = combineStateNodes(AppState, NavbarState, MainState);`
       <p className='paragraph'>The Radon source code is transpiled to ES2015 to work in any modern browser. You don't need to 
         use Babel or a module bundler to get started with Radon.
       </p>
-      <p className='paragraph'>Most likely, you'll also need the React bindings and the developer tools.</p>
+      <p className='paragraph'>Most likely, you'll also need the React bindings:</p>
       <code className='copySection'>npm install --save react-radon</code>
       <p className='paragraph'>Unlike Radon, React doesn't provide UMD builds, so you will need to use a CommonJS module 
         bundler like Webpack, Parcel, or Rollup to utilize Radon with React.</p>
@@ -104,9 +104,9 @@ const silo = combineStateNodes(AppState, NavbarState, MainState);`
         returned object is known as the silo.
       </p>      
       <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{combineNodes}</SyntaxHighlighter>
-      <p className='paragraph'>
+      {/* <p className='paragraph'>
         Learn how to connect the silo object to <Link to={props.url + '/docs/react-guide'}>React.</Link>
-      </p>
+      </p> */}
     </div>
         <div className='pageContents'>
             <ul>

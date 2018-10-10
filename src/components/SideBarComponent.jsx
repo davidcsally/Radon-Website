@@ -30,7 +30,7 @@ const SideBarComponent = (props) => {
             <Typography>
               <Link to={props.path + '/quick-start'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'quick-start' ? "selected" : '')}>Quick Start</Link><br/><br/>
               <Link to={props.path + '/react-guide'} className={'subtabs ' + (window.location.href.split('/').pop().split('#')[0] === 'react-guide' ? "selected" : '')}>React Guide</Link><br/><br/>
-              <Link to={props.path + '/nested-objects'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'nested-objects' ? "selected" : '')}>Adding Modifiers to State</Link><br/><br/>
+              <Link to={props.path + '/nested-objects'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'nested-objects' ? "selected" : '')}>Creating Modifiers</Link><br/><br/>
               <Link to={props.path + '/async-modifiers'} className={'subtabs '+ (window.location.href.split('/').pop().split('#')[0] === 'async-modifiers' ? "selected" : '')}>Async Modifiers</Link>
             </Typography>
           </ExpansionPanelDetails>

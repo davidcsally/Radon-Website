@@ -24,12 +24,12 @@ const NestedObjectsComponent = (props) => {
   }
 })`;
     const buttons = 
-`<button onClick={() => this.props.name.updateName('Radon is cool!!!')}>Click Me</button>
+`<button onClick={() => this.props.name.updateName('Hi!')}>Click Me</button>
 <button onClick={() => this.props.status.toggleStatus()}>Click Me Too</button>`;
     const otherInitializaModifiers = 
 `AppState.initializeModifiers({
-  arrayOfNames: {
-    addNameToArray: (current, payload) => {
+  names: {
+    addName: (current, payload) => {
       current.push(payload);
       return current;
     },
@@ -39,10 +39,10 @@ const NestedObjectsComponent = (props) => {
   }
 })`
     const anotherButton =
-`<button onClick={() => this.props.arrayOfNames.updateAName(0, 'Hannah')}>Edit an Index!</button>`
+`<button onClick={() => this.props.names.updateAName(0, 'Hannah')}>Edit!</button>`
     const initializeState = 
 `AppState.initializeState({
-  nestedObj: [
+  nest: [
     {
       first: 'Rick',
       last: 'Sanchez'
@@ -55,14 +55,14 @@ const NestedObjectsComponent = (props) => {
 });`
   const simpleInitializaModifiers =
 `AppState.initializeModifiers({
-  nestedObj: {
-    changeFirstName: (current, index, payload) => {
+  nest: {
+    editFN: (current, index, payload) => {
       return payload;
     }
   }
 })`
   const nestedObjectButton =
-`<button onClick={() => this.props.nestedObj.changeFirstName(0_first, 'Summer')}>Edit an Index!</button>`
+`<button onClick={() => this.props.nest.editFN(0_first, 'Summer')}>Edit!</button>`
 
   return (
     <div className="docContent">
@@ -72,7 +72,7 @@ const NestedObjectsComponent = (props) => {
         <h3 id='primative-modifiers' className='subheaders'>Adding Modifiers to Primitives</h3>
         <p className='paragraph'>
           Modifiers are functions that modify a single variable in state. Modifiers are attached to variables by
-          calling the method initializeModifiers which also takes an object as an argument. The keys of the
+          calling the initializeModifiers method which takes an object as an argument. The keys of the
           argument object must correspond to variables that have already been declared in AppState. The values
           are objects that contain the modifier functions as key-value pairs. There are two types of modifiers
           in Radon. The first type, as seen below, can accept either 1 or 2 arguments. The 'current' argument

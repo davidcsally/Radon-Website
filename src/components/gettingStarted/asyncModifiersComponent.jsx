@@ -24,8 +24,7 @@ const AsyncModifiersComponent = (props) => {
     name: {
       getName: async (current, payload) => {
         let data = await fetch('/getName');
-        data = await data.json();
-        return data;
+        return await data.json();
       }
     }
   })`
@@ -45,7 +44,7 @@ const AsyncModifiersComponent = (props) => {
         <p className='paragraph'>
           There are two ways of creating an asynchronous modifier. The first method involves returning a Promise. 
           Using a Promise in a modifier necessitates that the updated state value be passed into the resolve function of
-          the promise. Otherwise, the silo will not be aware of the intended state change.
+          the Promise. Otherwise, the Silo will not be aware of the intended state change.
         </p>
         <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{promise}</SyntaxHighlighter>
         <hr/>

@@ -13,7 +13,10 @@ const QuickStartComponent = (props) => {
   const importRadon = 
 `import { bindToSilo } from 'react-radon';`;
   const instantiate = 
-`class App extends React.Component {
+`import React from 'react';
+import { bindToSilo } from 'react-radon';
+
+class App extends React.Component {
   //React Code
 }
 
@@ -21,22 +24,24 @@ export default bindToSilo(App);`;
   const provider = 
 `import {render} from 'react-dom';
 import {Provider} from 'react-radon';
-//Silo from Exported combineNodes
+// Silo from Exported combineNodes
 import silo from './localSiloLocation';
 
 render(<Provider silo={silo}>
     <App />
   </Provider>,
-   document.getElementById('root'));
+  document.getElementById('root'));
 `;
   const objectBind = 
-`import {bindToSilo, bindObjectToSilo} from 'react-radon';
+`import React from 'react';
+import {bindToSilo, bindObjectToSilo} from 'react-radon';
+import ListComp from './components/ListComp';
 
 class App extends React.Component {
   render() {
-    let componentArray = this.props.val.objectArray.val.map(elm, i => {
-      let ComponentToRender = bindObjectToSilo(ListComponent, i, this.props.val.objectArray);
-      return <ComponentToRender />
+    const componentArray = this.props.objectArray.val.map((elm, i) => {
+      const Comp = bindObjectToSilo(ListComp, i, this.props.objectArray.val);
+      return <Comp />
     });
 
     return (
@@ -47,16 +52,13 @@ class App extends React.Component {
   }
 }
 
-class ListComponent extends React.Component {
-  //React Code
-}
-
 export default bindToSilo(App);`;
   const buttons = 
 `//---------------combineNodes.js----------------
+
 import {combineNodes, StateNode} from 'radon';
 
-let AppState = new StateNode('AppState');
+const AppState = new StateNode('AppState');
 
 AppState.initializeState({
   nameArr: ['Rick', 'Morty', 'Summer'];
@@ -73,6 +75,7 @@ AppState.initializeModifiers({
 export default combineNodes(AppState);
 
 //---------------index.js----------------
+
 import {render} from 'react-dom';
 import {Provider} from 'react-radon';
 import App from './App.jsx';
@@ -80,18 +83,19 @@ import silo from './combineNodes.js';
 
 render(<Provider silo={silo}>
     <App/>
-</Provider>,
-document.getElementById('root'));
+  </Provider>,
+  document.getElementById('root'));
 
 //---------------App.jsx----------------
+
 import React from 'react';
 import {bindToSilo, bindObjectToSilo} from 'react-radon';
 
 class App extends React.Component {
   render() {
     let componentsToRender = this.props.nameArr.map(elm, i => {
-      let BoundComponent = bindObjectToSilo(ListComponent, i, this.props.nameArr);
-      return <BoundComponent index={i}/>
+      let BoundComp = bindObjectToSilo(ListComponent, i, this.props.nameArr);
+      return <BoundComp index={i}/>
     });
 
     return (
@@ -131,45 +135,44 @@ export default bindToSilo(App);`;
       <br />
       <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{importRadon}</SyntaxHighlighter>
       <p className='paragraph'>
-        After setting up the state tree by following the <Link to={'/quick-start'}>Quick Start Guide</Link>, all of the stateful
-        react component must be bound to the tree.  Once bound the react component will be able to access the state of components above
-        them in the tree, along with having access to their own state.
+        After setting up the state tree by following the {/*<Link to={'docs/quick-start'}>Quick Start Guide</Link>,*/} 
+        Quick Start Guide, all of the stateful React components will be bound to the state tree. Once bound, the React 
+        components will be able to access the state of all parent components tracing back to the root.
       </p>
       <p className='paragraph'>
-        Binding components in Radon is as simple as importing the bindToSilo function from React-Radon and applying it to the Component
-        to bind. From here React-Radon will use the name of the React component in order to find a SiloNode that maps to it, attaching State
-        to the end of the component name.  If the Node isn't found in the Silo an error will be logged in the console, otherwise the node will be
-        subscribed to changes to that peice of state.  Additionally whenever the component unmounts it will automatically unsubscribe itself from any
-        subscriptions that it had.
+        Binding components in Radon is as simple as importing the bindToSilo method from React-Radon and passing a single
+        React component as a parameter. The bindToSilo methed will then use the name of the React component to find a 
+        corresponding State Node. If the Node isn't found in the Silo an error will be logged in the console but the thread
+        of execution will not break. If a Node is found, the component will be subscribed to changes to that piece of state.  
+        Additionally, whenever the component unmounts it will automatically unsubscribe itself from previous subscriptions.
       </p>
       <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{instantiate}</SyntaxHighlighter>
       <hr/>
       <h3 id='provider'>Provider</h3>
       <p className='paragraph'>
-        In order to use the React-Radon bind the Silo must be provided to the components from the top of the application.  The provider acts to pass down
-        the silo all of the components in the Radon application, making avaliable the subscribe function to allow them to request updates on state changes.
+        In order to use the bindToSilo method, the Silo must be passed to the components from the top of the application. 
+        The provider tag passes down the Silo as props and authorizes components to subscribe to pieces of state. 
       </p>
       <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{provider}</SyntaxHighlighter>
       <hr/>
-      <h3 id='nested-bind'>Dynamically Binding to Object in the Silo</h3>
+      <h3 id='nested-bind'>Dynamically Binding to Objects in the Silo</h3>
       <p className='paragraph'>
-        Subscribing on export deals with objects that are created before execution, however Components that are created during execution
-        need another way to deal with subscribing to changes in the silo.  This is where object binding comes into play, object binding
-        allows for the subscription to a specific index or key value in an array or object.  This allows individual components to watch
-        for state changes, decreasing the amount of Components radon has to render after each state change.
+        If a React Component relies on a state object value/index to render, it cannot use the bindToSilo method to subscribe 
+        to state. Instead it must use object binding. Object binding allows for the subscription to a specific 
+        index or key value in an array or object. Object binding allows components to watch for object specific state changes, 
+        thereby decreasing the number of components Radon has to render after each state change.
       </p>
       <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{objectBind}</SyntaxHighlighter>
       <hr/>
-      <h3 id='react-radon-demo'>Working with Radon State in React</h3>
+      <h3 id='react-radon-demo'>Working with State in React</h3>
       <p className='paragraph'>
-        Once an Component has been bound to Radon, it will automatically have props that reflect the state that it is subscribed to.  Each 
-        peice of state can be accessed by <code className='copySection'>this.props.nameOfStateValue.val</code>, which will be the current state
-        value.  Additionally the modifiers are stored in a similar way, being accessed with <code className='copySection'>this.props.nameOfStateValue.nameOfModifier</code>
-        allowing the specification of which peice of state is being modified, and by which modifier.
+        Once a component has been bound to Radon, it will automatically have props that reflect the state it is subscribed to. Each 
+        piece of state can be accessed by <code className='copySection'>this.props.nameOfStateValue.val</code>, which will be the current state
+        value. The modifiers are stored similarly and are accessible via <code className='copySection'>this.props.nameOfStateValue.nameOfModifier</code>.
       </p>
       <SyntaxHighlighter language='jsx' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{buttons}</SyntaxHighlighter>
       <p className='paragraph'>
-        Learn how to <Link to={props.url + '/docs/nested-objects'}>Add Modifiers</Link> to the silo.
+        {/* Learn how to <Link to={props.url + '/docs/nested-objects'}>Add Modifiers</Link> to the silo. */}
       </p>
     </div>
         <div className='pageContents'>

@@ -40,8 +40,8 @@ ReactDOM.render(
         <h3 id='props'>Props</h3>
         <p className='paragraph'>
           <ol>
-            <li> <code className='copySection'>silo</code> <italics>(Radon silo):</italics>The source of state in your application.</li>
-            <li> <code className='copySection'>children</code> <italics>(React Component):</italics>The root of your component tree</li>
+            <li> <code className='copySection'>silo</code> <italics>(Radon silo):</italics> The source of state in your application.</li>
+            <li> <code className='copySection'>children</code> <italics>(React Component):</italics> The root of your component tree</li>
           </ol>
         </p>
         <hr />
