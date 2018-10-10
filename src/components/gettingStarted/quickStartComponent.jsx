@@ -36,8 +36,8 @@ const QuickStartComponent = (props) => {
   }
 });`;
   const buttons = 
-`<button onClick={() => this.props.updateName('Radon is cool!!!')}>Click Me</button>
-<button onClick={() => this.props.toggleStatus()}>Click Me Too</button>`;
+`<button onClick={() => this.props.name.updateName('Radon is cool!!!')}>Click Me</button>
+<button onClick={() => this.props.status.toggleStatus()}>Click Me Too</button>`;
   const combineNodes = 
 `import AppState from './appState';
 import NarbarState from './navbarState';
@@ -59,7 +59,7 @@ const silo = combineStateNodes(AppState, NavbarState, MainState);`
       <p className='paragraph'>Unlike Radon, React doesn't provide UMD builds, so you will need to use a CommonJS module 
         bundler like Webpack, Parcel, or Rollup to utilize Radon with React.</p>
 
-
+      <hr/>
       <h3 id='initialize-state'>Initialize State</h3>
       <br/>
       <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{importRadon}</SyntaxHighlighter>

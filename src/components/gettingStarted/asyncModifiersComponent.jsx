@@ -40,6 +40,7 @@ const AsyncModifiersComponent = (props) => {
           data, and enforces the modifiers execute in the order they were invoked. The async queue asserts predictability
           of state, and eliminates any potential conflicting state updates. 
         </p>
+        <hr/>
         <h3 id='promises' className='subheaders'>Promises</h3>
         <p className='paragraph'>
           There are two ways of creating an asynchronous modifier. The first method involves returning a Promise. 
@@ -47,6 +48,7 @@ const AsyncModifiersComponent = (props) => {
           the promise. Otherwise, the silo will not be aware of the intended state change.
         </p>
         <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{promise}</SyntaxHighlighter>
+        <hr/>
         <h3 id='async-await' className='subheaders'>Async/Await</h3>
         <p className='paragraph'>
           The second method involves using async/await syntax. The modifier must be labeled as an async function. Any
