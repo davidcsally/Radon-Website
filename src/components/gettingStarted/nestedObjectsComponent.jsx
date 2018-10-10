@@ -24,8 +24,8 @@ const NestedObjectsComponent = (props) => {
   }
 })`;
     const buttons = 
-`<button onClick={() => this.props.updateName('Radon is cool!!!')}>Click Me</button>
-<button onClick={() => this.props.toggleStatus()}>Click Me Too</button>`;
+`<button onClick={() => this.props.name.updateName('Radon is cool!!!')}>Click Me</button>
+<button onClick={() => this.props.status.toggleStatus()}>Click Me Too</button>`;
     const otherInitializaModifiers = 
 `AppState.initializeModifiers({
   arrayOfNames: {
@@ -39,7 +39,7 @@ const NestedObjectsComponent = (props) => {
   }
 })`
     const anotherButton =
-`<button onClick={() => updateAName(0, 'Hannah')}>Edit an Index!</button>`
+`<button onClick={() => this.props.arrayOfNames.updateAName(0, 'Hannah')}>Edit an Index!</button>`
     const initializeState = 
 `AppState.initializeState({
   nestedObj: [
@@ -62,12 +62,13 @@ const NestedObjectsComponent = (props) => {
   }
 })`
   const nestedObjectButton =
-`<button onClick={() => updateAName(0_first, 'Summer')}>Edit an Index!</button>`
+`<button onClick={() => this.props.nestedObj.changeFirstName(0_first, 'Summer')}>Edit an Index!</button>`
 
   return (
     <div className="docContent">
       <div className='all-text-components apiref'>
         <h1>Adding Modifiers to State</h1>
+        <hr/>
         <h3 id='primative-modifiers' className='subheaders'>Adding Modifiers to Primitives</h3>
         <p className='paragraph'>
           Modifiers are functions that modify a single variable in state. Modifiers are attached to variables by
@@ -85,6 +86,7 @@ const NestedObjectsComponent = (props) => {
           must be passed into the function as Radon will fill the 'current' parameter by default.
         </p>
         <SyntaxHighlighter language='jsx' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{buttons}</SyntaxHighlighter>
+        <hr/>
         <h3 id='object-modifiers' className='subheaders'>Adding Modifiers to Objects</h3>
         <p className='paragraph'>
           The second modifier type is what helps Radon eliminate unnecessary re-rendering of frontend components.
@@ -104,6 +106,7 @@ const NestedObjectsComponent = (props) => {
           Again, it is important to note that the 'current' parameter will be injected with state automatically.
         </p>
         <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{anotherButton}</SyntaxHighlighter>
+        <hr/>
         <h3 id='nested-object-modifiers' className='subheaders'>Adding Modifiers to Nested Objects</h3>
         <p className='paragraph'>
           It is possible to add modifiers to deelpy nested objects, although it will take a more precise index.
