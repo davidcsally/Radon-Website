@@ -157,11 +157,10 @@ export default bindToSilo(App);`;
       <hr/>
       <h3 id='nested-bind'>Dynamically Binding to Objects in the Silo</h3>
       <p className='paragraph'>
-        {/* Subscribing on export deals with objects that are created before execution, however Components that are created 
-        during executionneed another way to deal with subscribing to changes in the silo.  This is where object binding 
-        comes into play, object binding allows for the subscription to a specific index or key value in an array or object. 
-        This allows individual components to watch for state changes, decreasing the amount of Components radon has to 
-        render after each state change. */}
+        If a React Component relies on a state object value/index to render, it cannot use the bindToSilo method to subscribe 
+        to state. Instead it must use object binding. Object binding allows for the subscription to a specific 
+        index or key value in an array or object. Object binding allows components to watch for object specific state changes, 
+        thereby decreasing the number of components Radon has to render after each state change.
       </p>
       <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{objectBind}</SyntaxHighlighter>
       <hr/>
