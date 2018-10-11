@@ -11,28 +11,28 @@ registerLanguage('jsx', jsx);
 const BindObjectToSilo = (props) => {
 
   const bindToSiloEx = 
-  `import {bindToSilo, bindObjectToSilo} from 'react-radon';
+`import {bindToSilo, bindObjectToSilo} from 'react-radon';
 
-  class App extends React.Component {
-    render() {
-      let compArray = this.props.objArray.val.map(elm, i => {
-        let NewComp = bindObjectToSilo(ListComp, i, this.props.val.objArray);
-        return <NewComp />
-      });
-  
-      return (
-        <div>
-          {componentArray}
-        </div>
-      )
-    }
+class App extends React.Component {
+  render() {
+    let compArray = this.props.objArray.val.map(elm, i => {
+      let NewComp = bindObjectToSilo(ListComp, i, this.props.val.objArray);
+      return <NewComp />
+    });
+
+    return (
+      <div>
+        {componentArray}
+      </div>
+    )
   }
-  
-  class ListComp extends React.Component {
-    //React Code
-  }
-  
-  export default bindToSilo(App);`;
+}
+
+class ListComp extends React.Component {
+  //React Code
+}
+
+export default bindToSilo(App);`;
 
   return (
     <div className="docContent">
