@@ -15,9 +15,9 @@ const BindObjectToSilo = (props) => {
 
   class App extends React.Component {
     render() {
-      let componentArray = this.props.val.objectArray.val.map(elm, i => {
-        let ComponentToRender = bindObjectToSilo(ListComponent, i, this.props.val.objectArray);
-        return <ComponentToRender />
+      let compArray = this.props.objArray.val.map(elm, i => {
+        let NewComp = bindObjectToSilo(ListComp, i, this.props.val.objArray);
+        return <NewComp />
       });
   
       return (
@@ -28,7 +28,7 @@ const BindObjectToSilo = (props) => {
     }
   }
   
-  class ListComponent extends React.Component {
+  class ListComp extends React.Component {
     //React Code
   }
   
@@ -52,6 +52,8 @@ const BindObjectToSilo = (props) => {
           <p className='paragraph'>
             <ol>
               <li> <code className='copySection'>component</code> <italics>(React Component): </italics>Wraps a React component with another React component to pass down state as props</li>
+              <li> <code className='copySection'>i</code> <italics>(index): </italics>The target index of an array or key of an object</li>
+              <li> <code className='copySection'>object</code> <italics>(object): </italics>The object containing the subscribed index</li>
             </ol>
           </p>
           <hr />
