@@ -274,6 +274,7 @@ h1 {
 @media screen and (max-width: 600px) {
 
   /* Main Page */
+
   #logo-wrapper {
     width: 100%;
   }
@@ -349,4 +350,13 @@ h1 {
   .all-text-components > p {
     width: 45%;
   }
+
+  .all-text-components > h1 {
+    width: 45%;
+  }
+
+  /* .mobile-code {
+    width: 45%;
+    overflow-x: scroll;
+  } */
 }
