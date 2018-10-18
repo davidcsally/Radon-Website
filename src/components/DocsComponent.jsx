@@ -7,14 +7,16 @@ import logo from '../cyanWithGlow.jpg';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import MobileMenuComponent from './mobileMenuComponent';
 
 const DocsComponent = (props) => { 
   return (
     <div id='docs-component'>
       <AppBar className="header" position="static" color="secondary">
         <Toolbar>
-          <Typography variant="title" color="inherit">
-            <Link to='/'><img id='appbar-radon-logo' src={ logo }></img></Link>
+          <MobileMenuComponent />
+          <Typography className='link-wrapper' variant="title" color="inherit">
+            <Link to='/'><div id='appbar-logo-wrapper'><img id='appbar-radon-logo' src={ logo }></img></div></Link>
           </Typography>
         </Toolbar>
       </AppBar>
