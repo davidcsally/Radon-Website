@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-
-import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { withTheme } from '@material-ui/core';
 
 class MobileMenuComponent extends Component {
   constructor(props) {
@@ -47,7 +43,11 @@ class MobileMenuComponent extends Component {
 
     return (
       <div id='mobile-menu'>
-        <div id='menu-icon' onClick={this.handleClick}><img src='../menuIcon.png'/></div>
+        <div id='menu-icon-wrapper' onClick={this.handleClick}>
+          <div className='hamburger'></div>
+          <div className='hamburger'></div>
+          <div className='hamburger'></div>
+        </div>
         <Menu
           id="long-menu"
           anchorEl={anchorEl}

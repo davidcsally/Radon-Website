@@ -307,10 +307,26 @@ h1 {
 
   #mobile-menu {
     display: inline;
+    position: absolute;
+  }
+
+  #menu-icon-wrapper {
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
   }
 
   #menu-icon {
-    cursor: pointer;
+    height: 40px;
+    width: auto;
+  }
+
+  .hamburger {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    border-radius: 2px;
   }
 
   .mobile-links {
