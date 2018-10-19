@@ -1,7 +1,7 @@
 import React from 'react';  
 import { Link } from 'react-router-dom';
 
-class IntroductionComponent extends React.Component{ 
+class IntroductionComponent extends React.Component { 
   constructor(props) {
     super(props);
   }
@@ -9,7 +9,7 @@ class IntroductionComponent extends React.Component{
   render() {
     return (
       <div className="docContent">
-      <div className='all-text-components apiref' id='motivation-component'>
+      <div className='all-text-components apiref'>
         <h1>Introduction</h1>
         <p className='subheaders'>An abstract look into Radon.</p>
         <p className='paragraph'>A predictable state management tool that enforces data encapsulation via 
@@ -60,11 +60,11 @@ class IntroductionComponent extends React.Component{
         </p>
       </div>
       <div className='pageContents'>
-              <ul>
-              <p>CONTENTS</p>
-                <li className={this.props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#background'}>Background</Link></li>
-                <li className={this.props.currentContent === 1 ? "currentlyReading" : ""}><Link to={'#howitworks'}>How It Works</Link></li>
-              </ul>
+        <ul>
+          <p>CONTENTS</p>
+          <li className={this.props.currentContent === 0 ? "currentlyReading" : ""}><Link to={'#background'}>Background</Link></li>
+          <li className={this.props.currentContent === 1 ? "currentlyReading" : ""}><Link to={'#howitworks'}>How It Works</Link></li>
+        </ul>
       </div>
       </div>
     )

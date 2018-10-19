@@ -268,6 +268,11 @@ h1 {
   margin: 15px 0;
 }
 
+.all-text-components > pre {
+  font-size: 13px;
+  overflow-x: scroll !important;
+}
+
 /* Mobile */
 
 @media screen and (max-width: 600px) {
@@ -344,7 +349,8 @@ h1 {
 
   .all-text-components {
     margin: 30px 0px;
-    width: 100% !important;
+    /* max-width: 550px; */
+    width: 80% !important;
   }
 
   .all-text-components > p {
@@ -355,8 +361,20 @@ h1 {
     width: 100%;
   }
 
-  /* .mobile-code {
-    width: 45%;
-    overflow-x: scroll;
-  } */
+  .all-text-components > pre {
+    width: 100%;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .all-text-components > pre {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .all-text-components > pre {
+    font-size: 9px;
+  }
 }
