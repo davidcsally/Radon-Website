@@ -36,8 +36,8 @@ const QuickStartComponent = (props) => {
   }
 });`;
   const buttons = 
-`<button onClick={() => this.props.name.updateName('Hi!')}>Click Me</button>
-<button onClick={() => this.props.status.toggleStatus()}>Click Me Too</button>`;
+`<button onClick={() => this.props.name.updateName('Hi!')}>Click!</button>
+<button onClick={() => this.props.status.toggleStatus()}>Me Too!</button>`;
   const combineNodes = 
 `import AppState from './appState';
 import NarbarState from './navbarState';
@@ -104,9 +104,6 @@ const silo = combineStateNodes(AppState, NavbarState, MainState);`
         returned object is known as the silo.
       </p>      
       <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{combineNodes}</SyntaxHighlighter>
-      {/* <p className='paragraph'>
-        Learn how to connect the silo object to <Link to={props.url + '/docs/react-guide'}>React.</Link>
-      </p> */}
     </div>
         <div className='pageContents'>
             <ul>

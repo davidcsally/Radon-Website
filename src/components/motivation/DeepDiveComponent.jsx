@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const DeepDiveComponent = (props) => { 
   return (
     <div className="docContent">
-    <div className='all-text-components apiref' id='motivation-component'>
+    <div className='all-text-components apiref'>
       <h1>Deep Dive</h1>
       <p className='subheaders'>A deeper look into how Radon works.</p>
       <h3 id='data-encapsulation'>Data Encapsulation</h3>
