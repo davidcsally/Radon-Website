@@ -62,7 +62,7 @@ const silo = combineStateNodes(AppState, NavbarState, MainState);`
       <hr/>
       <h3 id='initialize-state'>Initialize State</h3>
       <br/>
-      <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{importRadon}</SyntaxHighlighter>
+      {/* <SyntaxHighlighter language='javascript' lineNumberStyle={{color: '#A9A9A9', paddingLeft: 5, paddingRight: 5}} showLineNumbers={true} style={coy}>{importRadon}</SyntaxHighlighter> */}
       <p className='paragraph'>
         StateNode is a class needed for creating instances of state. In Radon, StateNodes are created in
         tandem with frontend components. The naming convention is important here; if you have created 

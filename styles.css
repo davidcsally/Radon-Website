@@ -180,6 +180,7 @@ div.docContent {
 
 div.docContent > div.pageContents {
   width: 400px;
+  margin-right: 10%;
 }
 
 div.docContent > div.pageContents > ul {
@@ -228,6 +229,8 @@ div.apiref {
   color: rgb(73, 73, 73);
   padding-left: 25px;
   padding-right: 25px;
+  min-width: 50%;
+  max-width: 50%;
 }
 
 div.apiref > hr {
